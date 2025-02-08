@@ -1,0 +1,128 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: transparent;
+  transition: 0.3s;
+  padding: 16px 0;
+
+  min-height: 90px;
+}
+
+.wrapperBg {
+  background: var(--Primitive-950);
+
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  padding: 10px 0;
+}
+
+.logo {
+  max-width: 150px;
+}
+
+.navItems,
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+}
+.buttonContainer {
+  margin-left: auto;
+  width: auto;
+  gap: 4px;
+}
+.navItem {
+  color: var(--Primitive-200);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+.navActive {
+  color: var(--Primitive-Default);
+}
+
+.mobileButton {
+  justify-content: flex-end;
+  gap: 20px;
+  display: none;
+}
+
+.mobileButton .button {
+  gap: 5px;
+}
+
+.icon {
+  display: none;
+}
+
+@media only screen and (max-width: 1199px) {
+  .wrapper {
+    min-height: 70px;
+    padding: 10px 0;
+  }
+  .navItems {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    min-height: 100vh;
+    background: var(--Primitive-950);
+    transform: translateX(250%);
+    transition: 0.3s;
+    position: fixed;
+    top: calc(100% + 1px);
+    right: 0;
+    padding-top: 30px;
+    padding-left: 50px;
+    max-width: 320px;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .sidebar {
+    transform: translateX(0);
+    right: 0;
+  }
+
+  .mobileButton {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: auto;
+  }
+  .buttonContainer {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 0;
+    gap: 14px;
+  }
+  .icon {
+    display: block;
+    cursor: pointer;
+    color: var(--Primitive-0);
+    font-size: 28px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .logo {
+    max-width: 120px;
+  }
+
+  .mobileButton .button {
+    padding: 8px 12px;
+  }
+}

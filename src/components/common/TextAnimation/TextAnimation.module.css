@@ -1,0 +1,65 @@
+.container {
+  position: relative;
+  z-index: 0;
+  min-height: 200vh;
+  padding-top: 0;
+}
+
+.stickyContent {
+  position: sticky;
+  top: 150px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: transparent;
+  /* Increase the height if needed */
+  /* Adjust this if you want more or less height */
+  margin: 0 auto;
+}
+
+.text {
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: bold;
+  color: var(--Primitive-500);
+  align-items: flex-end;
+}
+
+.placeholder {
+  position: absolute;
+  opacity: 0.3;
+}
+
+.revealedWord {
+  color: var(--Primitive-0);
+}
+
+.wordWrapper {
+  position: relative;
+  margin: 0 4px;
+  font-size: 48px;
+  line-height: 133.33%;
+  font-weight: 400;
+}
+.link {
+  color: var(--Primitive-Default);
+  font-size: 16px;
+  font-weight: 500;
+  display: inline-block;
+  padding-bottom: 1.5%;
+}
+@media only screen and (max-width: 991px) {
+  .wordWrapper {
+    font-size: 36px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .wordWrapper {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .wordWrapper {
+    font-size: 20px;
+  }
+}

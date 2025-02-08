@@ -1,0 +1,33 @@
+.slick-list {
+  margin-left: -10px !important;
+}
+
+.slick-track {
+  gap: 12px;
+}
+
+.slick-slide {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-12, 12px);
+  background: url(../../../../images/cardArt.svg),
+    var(--utilities-tp-white-3, rgba(255, 255, 255, 0.03));
+
+  /* background-blur/24 */
+  backdrop-filter: blur(calc(var(--blur-24, 24px) / 2));
+  padding: 20px;
+}
+.slick-slide > div > div {
+  height: 100%;
+}
+@media only screen and (max-width: 1199px) {
+  .slick-slide {
+    padding: 20px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .slick-slide {
+    padding: 20px;
+  }
+}

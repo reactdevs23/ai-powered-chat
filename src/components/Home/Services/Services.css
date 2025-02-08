@@ -1,0 +1,27 @@
+.slick-track {
+  gap: 12px;
+}
+
+.slick-slide {
+  border-radius: var(--radius-16, 16px);
+  border: 1px solid var(--Primitive-950);
+  background: var(--Primitive-950);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.slick-slide > div {
+  height: 100%;
+}
+@media only screen and (max-width: 1199px) {
+  .slick-slide {
+    padding: 24px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .slick-slide {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  border-radius: var(--radius-16, 16px);
+  padding: 80px 96px;
+  background: url(../../../images/getStartedArt.svg);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.infoContainer {
+  max-width: 440px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 16px;
+}
+.listContainer {
+  max-width: 320px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.list {
+  display: grid;
+  grid-template-columns: 24px auto;
+  align-items: center;
+  gap: 20px;
+}
+.icon {
+  max-width: 24px;
+  width: 100%;
+}
+@media only screen and (max-width: 1199px) {
+  .container {
+    padding: 60px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .listContainer {
+    max-width: 440px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .container {
+    padding: 48px 32px;
+  }
+}

@@ -1,0 +1,56 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  max-width: 100%;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--Primitive-100);
+  padding: 20px 0;
+}
+.items {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 6px;
+  padding: 0 3px;
+}
+.item {
+  border-radius: var(--Button-corner-radius, 8px);
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  padding: 6px 12px;
+}
+.wrapper::before,
+.wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px; /* Width of the gradient */
+  z-index: 10;
+  pointer-events: none; /* Ensure it doesn't interfere with scrolling */
+  border-radius: 20px;
+}
+
+.wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+@media only screen and (max-width: 991px) {
+  .wrapper {
+    width: 100%;
+    max-width: 348px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .wrapper {
+    max-width: 100%;
+  }
+}

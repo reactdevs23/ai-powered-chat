@@ -1,0 +1,114 @@
+.button {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -0.2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  background: var(--Primitive-Default);
+  color: var(--Primitive-950);
+  cursor: pointer;
+  white-space: nowrap;
+
+  border-radius: 6px;
+  border: none;
+}
+
+.radius {
+  border-radius: 24px;
+}
+.base {
+  font-size: 14px;
+}
+.sm {
+  font-size: 14px;
+  padding: 8px 14px;
+}
+.lg {
+  font-size: 18px;
+  padding: 12px 20px;
+}
+.primitive800 {
+  background: var(--Primitive-800);
+  color: var(--Primitive-400);
+}
+.btnPrimary,
+.primary {
+  color: var(--Primitive-Default);
+  border-radius: var(--radius-8, 8px);
+  border: 1px solid rgba(0, 217, 149, 0.16);
+  background: radial-gradient(
+      100.84% 100% at 50.42% 0%,
+      rgba(0, 217, 149, 0.08) 0%,
+      rgba(0, 217, 149, 0) 100%
+    ),
+    var(--Primitive-transparent-8);
+
+  /* drop-shadow/sm */
+  box-shadow: var(--depth-0, 0px) var(--depth-1, 1px) var(--blur-2, 2px)
+      var(--depth-0, 0px) var(--color-black-80, rgba(0, 0, 0, 0.8)),
+    var(--depth-0, 0px) var(--depth-0, 0px) var(--blur-1, 1px)
+      var(--depth-0, 0px) var(--color-black-60, rgba(0, 0, 0, 0.6));
+}
+
+.transparent {
+  background: transparent;
+  color: var(--Primitive-200);
+  border-radius: var(8px);
+  /* 
+  box-shadow: var(--depth-0, 0px) var(--depth-1, 1px) var(--blur-2, 2px)
+      var(--depth-0, 0px) var(--color-black-80, rgba(0, 0, 0, 0.8)),
+    var(--depth-0, 0px) var(--depth-0, 0px) var(--blur-1, 1px)
+      var(--depth-0, 0px) var(--color-black-60, rgba(0, 0, 0, 0.6)); */
+}
+.transparent:hover {
+  color: var(--Primitive-Default);
+  border-radius: var(--radius-8, 8px);
+
+  background: radial-gradient(
+      100.84% 100% at 50.42% 0%,
+      rgba(0, 217, 149, 0.08) 0%,
+      rgba(0, 217, 149, 0) 100%
+    ),
+    var(--Primitive-transparent-8);
+
+  /* drop-shadow/sm */
+  box-shadow: var(--depth-0, 0px) var(--depth-1, 1px) var(--blur-2, 2px)
+      var(--depth-0, 0px) var(--color-black-80, rgba(0, 0, 0, 0.8)),
+    var(--depth-0, 0px) var(--depth-0, 0px) var(--blur-1, 1px)
+      var(--depth-0, 0px) var(--color-black-60, rgba(0, 0, 0, 0.6));
+}
+.primitiveTransparent8 {
+  background: var(--Primitive-Transparent-8);
+  color: var(--Primitive-Default);
+}
+.wFull {
+  width: 100%;
+}
+.spinner {
+  display: inline-block;
+  animation: spin 1s linear infinite;
+  margin-right: 5px; /* Add some space between the spinner and the text */
+}
+.loading {
+  gap: 8px;
+  opacity: 0.6;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media only screen and (max-width: 520px) {
+  .button {
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+}

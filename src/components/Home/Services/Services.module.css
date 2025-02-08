@@ -1,0 +1,26 @@
+.wrapper {
+  max-width: 808px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+.cards {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+}
+@media only screen and (max-width: 991px) {
+  .wrapper {
+    gap: 64px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    align-items: center;
+    margin: 0 auto;
+  }
+}

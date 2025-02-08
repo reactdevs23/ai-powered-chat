@@ -1,0 +1,22 @@
+.card {
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+
+  /* background-blur/24 */
+  backdrop-filter: blur(calc(var(--blur-24, 24px) / 2));
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  max-width: 320px;
+  width: 100%;
+
+  flex: 1;
+}
+@media only screen and (max-width: 767px) {
+  .card {
+    max-width: 420px;
+  }
+}

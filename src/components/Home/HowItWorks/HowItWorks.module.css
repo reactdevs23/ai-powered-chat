@@ -1,0 +1,64 @@
+.wrapper {
+  background: url(../../../images/howitWorksArt.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.container {
+  max-width: 808px;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 500px;
+  width: 100%;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card {
+  padding: 32px 48px;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: var(--radius-12, 12px);
+  background: var(--utilities-tp-white-3, rgba(255, 255, 255, 0.03));
+
+  /* background-blur/24 */
+  backdrop-filter: blur(calc(var(--blur-24, 24px) / 2));
+}
+.infoContainer {
+  max-width: 320px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.img {
+  max-width: 150px;
+  display: block;
+}
+@media only screen and (max-width: 1199px) {
+  .card {
+    padding: 24px 32px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .card {
+    padding: 32px 40px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .card {
+    padding: 32px;
+    flex-direction: column-reverse;
+  }
+  .heading,
+  .info {
+    text-align: center;
+  }
+}
