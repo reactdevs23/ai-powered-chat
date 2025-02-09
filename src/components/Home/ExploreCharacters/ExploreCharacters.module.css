@@ -110,3 +110,12 @@
     right: 42px;
   }
 }
+@media only screen and (max-width: 520px) {
+  .nextButton,
+  .previousButton {
+    font-size: 24px;
+  }
+  .nextButton {
+    right: 30px;
+  }
+}
