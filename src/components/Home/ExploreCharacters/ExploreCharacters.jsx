@@ -128,7 +128,7 @@ const ExploreCharacters = () => {
 
   return (
     <section className={classes.wrapper}>
-      <div className={clsx(classes.container, "container")}>
+      <div className={clsx(classes.container)}>
         <div className={classes.header}>
           <Heading xl gradient medium>
             Explore Characters
