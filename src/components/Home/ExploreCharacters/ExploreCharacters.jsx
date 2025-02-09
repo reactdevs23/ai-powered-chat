@@ -50,20 +50,21 @@ const ExploreCharacters = () => {
       info: "Guides users with personalized workouts and fitness tips Guides users with pe.",
     },
   ];
-  const [slidesToShow, setSlidesToShow] = useState(3.7);
+  const [slidesToShow, setSlidesToShow] = useState(null);
 
   useEffect(() => {
+    const width = window.innerWidth;
+
     const handleResize = () => {
-      const width = window.innerWidth;
       if (width >= 1280) {
         setSlidesToShow(3.8);
-      } else if (width >= 1199) {
+      } else if (width <= 1199) {
         setSlidesToShow(2.9);
-      } else if (width >= 991) {
+      } else if (width <= 991) {
         setSlidesToShow(2.2);
-      } else if (width >= 767) {
+      } else if (width <= 767) {
         setSlidesToShow(1.9);
-      } else if (width >= 575) {
+      } else if (width <= 575) {
         setSlidesToShow(1.1);
       } else {
         setSlidesToShow(3.7);
