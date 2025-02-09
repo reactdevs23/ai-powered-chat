@@ -20,7 +20,7 @@ const AiCharecters = () => {
   ];
   return (
     <section className={clsx(classes.wrapper, "container")}>
-      <div className={clsx(classes.container)}>
+      <div className={clsx(classes.container)} data-aos="fade-up">
         <div className={classes.header}>
           <Heading primitive0 xl5>
             AI <span className="highlight">Characters</span>

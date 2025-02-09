@@ -128,7 +128,7 @@ const ExploreCharacters = () => {
   };
 
   return (
-    <section className={classes.wrapper}>
+    <section className={classes.wrapper} data-aos="fade-up">
       <div className={clsx(classes.container)}>
         <div className={classes.header}>
           <Heading xl gradient medium>

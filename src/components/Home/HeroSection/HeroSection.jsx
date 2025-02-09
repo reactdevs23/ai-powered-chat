@@ -9,21 +9,25 @@ const HeroSection = () => {
   const [question, setQuestion] = useState("");
   const features = [
     {
-      title: ["18+", "AI Characters"],
+      highlightText: "18+",
+      title: "AI Characters",
       info: "Interact with a diverse range of AI personalities, each with unique traits, tones, and expertise.",
     },
     {
-      title: ["Intelligent", "Conversations"],
+      title: "Intelligent",
+      highlightText: "Conversations",
       info: "Human-like responses with natural language processing for smooth and meaningful interactions.",
     },
     {
-      title: ["Customizable", "Personality "],
-      info: "Human-like responses with natural language processing for smooth and meaningful interactions.teract with a diverse range of AI personalities, each with unique traits, tones, and expertise.",
+      highlightText: "Customizable",
+      title: "Personality",
+      info: "Interact with a diverse range of AI personalities, each with unique traits, tones, and expertise.",
     },
   ];
+
   return (
     <section className={clsx(classes.wrapper)}>
-      <div className={clsx(classes.container, "container")}>
+      <div className={clsx(classes.container, "container")} data-aos="fade-up">
         <Heading xl6 textCenter gradient>
           Elevate Your Conversations with AI-Powered Chat
         </Heading>
@@ -43,7 +47,7 @@ const HeroSection = () => {
       </div>{" "}
       <div className={clsx(classes.features, "container")}>
         {features?.map((feature, i) => (
-          <div className={classes.feature} key={i}>
+          <div className={classes.feature} key={i} data-aos="fade-up">
             <div className={classes.heading}>
               <Heading
                 xl4={(i + 1) % 2 === 0}
@@ -52,7 +56,7 @@ const HeroSection = () => {
                 primitiveDefault={(i + 1) % 2 !== 0}
                 gradient={(i + 1) % 2 === 0}
               >
-                {feature?.title[0]}
+                {(i + 1) % 2 !== 0 ? feature?.highlightText : feature?.title}
               </Heading>
               <Heading
                 xl4={(i + 1) % 2 !== 0}
@@ -61,7 +65,7 @@ const HeroSection = () => {
                 primitiveDefault={(i + 1) % 2 === 0}
                 gradient={(i + 1) % 2 !== 0}
               >
-                {feature?.title[1]}
+                {(i + 1) % 2 === 0 ? feature?.highlightText : feature?.title}
               </Heading>
             </div>
             <Text base primitive400>

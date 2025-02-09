@@ -7,7 +7,10 @@ const Services = () => {
   const handleJoinNow = () => {};
   const handleClaimNow = () => {};
   return (
-    <section className={clsx(classes.wrapper, "container", "sectionPadding")}>
+    <section
+      className={clsx(classes.wrapper, "container", "sectionPadding")}
+      data-aos="fade-up"
+    >
       <TextRevealByWord
         text="At [Brand Name], we are revolutionizing digital interactions with AI-driven chat solutions. Our mission is to empower businesses and individuals with intelligent, engaging, and seamless conversations."
         learnMoreLink="#"

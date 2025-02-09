@@ -9,7 +9,7 @@ const GetStartToday = () => {
     "Join now and unlock the future of AI chat!",
   ];
   return (
-    <section className={classes.wrapper}>
+    <section className={classes.wrapper} data-aos="fade-up">
       <div className={clsx(classes.container, "container")}>
         <div className={classes.infoContainer}>
           <Heading primitive0 xl5>
