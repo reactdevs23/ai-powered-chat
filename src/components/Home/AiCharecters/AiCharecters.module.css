@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 96px;
+  padding: 112px 0;
 }
 .container {
   display: flex;
@@ -50,7 +51,8 @@
 }
 @media only screen and (max-width: 991px) {
   .wrapper {
-    gap: 96px;
+    gap: 48px;
+    padding: 56px 0;
   }
   .container {
     gap: 32px;

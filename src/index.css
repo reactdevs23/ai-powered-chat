@@ -68,7 +68,7 @@ button:hover {
   margin: 0 auto;
 }
 .sectionPadding {
-  padding: 100px 0;
+  padding: 112px 0;
 }
 .highlight {
   color: var(--Primitive-Default);
@@ -145,7 +145,7 @@ input::placeholder {
 }
 @media only screen and (max-width: 767px) {
   .sectionPadding {
-    padding: 50px 0;
+    padding: 56px 0;
   }
 }
 /* slick slider */

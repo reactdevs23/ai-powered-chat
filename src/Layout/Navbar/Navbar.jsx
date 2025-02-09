@@ -17,7 +17,12 @@ const Navbar = () => {
     useState(false);
   const [isResourcesDropdownActive, setIsResourcesDropdownActive] =
     useState(false);
-  const dropdownRoutes = [
+  const characters = [
+    { navItem: "Crypto Checkout", to: "/" },
+    { navItem: "Wallet as a Service", to: "/" },
+    { navItem: "Blockchain API", to: "/" },
+  ];
+  const resources = [
     { navItem: "Crypto Checkout", to: "/" },
     { navItem: "Wallet as a Service", to: "/" },
     { navItem: "Blockchain API", to: "/" },
@@ -74,7 +79,7 @@ const Navbar = () => {
             onSelect={(val) => {
               setIsCharecterDropdownActive(false);
             }}
-            dropdownItems={dropdownRoutes}
+            dropdownItems={characters}
             dropdownRef={charecterRef}
           >
             <span
@@ -105,7 +110,7 @@ const Navbar = () => {
             onSelect={(val) => {
               setIsResourcesDropdownActive(false);
             }}
-            dropdownItems={dropdownRoutes}
+            dropdownItems={resources}
             dropdownRef={resourcesRef}
           >
             <span

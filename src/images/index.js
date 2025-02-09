@@ -1,4 +1,5 @@
-import logo from "./logo.png";
+import logo from "./logo.svg";
+import smallLogo from "./smallLogo.svg";
 import smartAdvisor from "./smartAdvisor.svg";
 import friendlyHelper from "./FriendlyHelper.svg";
 import techGuru from "./techGuru.svg";
@@ -20,4 +21,5 @@ export {
   conversationsImg,
   assistanceImg,
   checkMarkIcon,
+  smallLogo,
 };

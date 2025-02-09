@@ -22,7 +22,7 @@ const HowItWorks = () => {
   ];
   return (
     <section className={classes.wrapper}>
-      <div className={clsx("container", classes.container, "sectionPadding")}>
+      <div className={clsx("container", classes.container)}>
         {" "}
         <div className={classes.header}>
           <Heading primitive0 xl5>
@@ -35,7 +35,7 @@ const HowItWorks = () => {
         </div>
         <div className={classes.cards}>
           {data?.map((card, i) => (
-            <div className={classes.card}>
+            <div className={classes.card} key={i}>
               <div className={classes.infoContainer}>
                 <Heading xl2 medium primitive0 className={classes.heading}>
                   <span className="gradient"> {card.title[0]} </span>{" "}

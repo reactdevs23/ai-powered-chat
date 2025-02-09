@@ -1,0 +1,144 @@
+.wrapper {
+  background: var(--Primitive-950);
+  padding-top: 112px;
+  padding-bottom: 32px;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto auto auto;
+  gap: 64px;
+  padding: 64px 0;
+  border-top: 1px solid var(--Primitive-800);
+  border-bottom: 1px solid var(--Primitive-800);
+}
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 297px;
+  width: 100%;
+}
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.logo {
+  max-width: 48px;
+  width: 100%;
+  display: block;
+}
+.checkMarkIcon {
+  max-width: 16px;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.itemsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.devider1,
+.devider2 {
+  width: 1px;
+  height: 100%;
+  background: var(--Primitive-800);
+}
+.heading {
+  margin-bottom: 6px;
+}
+.link {
+  color: var(--Primitive-400);
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.copyRightContainer {
+  border-top: 1px solid rgba(114, 115, 157, 0.24);
+  padding: 32px 0;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 24px;
+  align-items: center;
+}
+.brandName {
+  font-weight: 500px;
+}
+.logoContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.policyAndCondition {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.itemsContainer .seeAll {
+  padding: 0;
+  background: transparent;
+  color: var(--Primitive-Default);
+  text-align: left;
+  justify-content: flex-start;
+  font-size: 14px;
+}
+.socialContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.followUs {
+  margin-bottom: 8px;
+}
+.icon {
+  font-size: 20px;
+  color: var(--Primitive-Default);
+}
+@media only screen and (max-width: 1199px) {
+  .container {
+    gap: 48px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .wrapper {
+    padding-top: 56px;
+  }
+  .container {
+    padding: 64px 0;
+    gap: 64px;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+  }
+  .infoContainer {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .container {
+    gap: 48px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .devider2,
+  .devider1 {
+    display: none;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .container {
+    gap: 48px 24px;
+  }
+  .supportContainer {
+    grid-column: 1/-1;
+  }
+  .logo {
+    max-width: 40px;
+  }
+}

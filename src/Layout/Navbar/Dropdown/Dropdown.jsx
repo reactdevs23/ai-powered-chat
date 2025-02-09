@@ -26,7 +26,7 @@ const Dropdown = ({
       >
         <Text>{children}</Text>
         {isActive ? (
-          <FaAngleUp className={classes.arrow} />
+          <FaAngleUp className={clsx(classes.arrow, classes.active)} />
         ) : (
           <FaAngleDown className={classes.arrow} />
         )}

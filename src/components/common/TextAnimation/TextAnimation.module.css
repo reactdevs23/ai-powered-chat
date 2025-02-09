@@ -47,19 +47,29 @@
   font-weight: 500;
   display: inline-block;
   padding-bottom: 1.5%;
+  padding-left: 5px;
 }
 @media only screen and (max-width: 991px) {
   .wordWrapper {
     font-size: 36px;
+  }
+  .link {
+    padding-bottom: 1%;
   }
 }
 @media only screen and (max-width: 767px) {
   .wordWrapper {
     font-size: 24px;
   }
+  .link {
+    padding-bottom: 0.6%;
+  }
 }
 @media only screen and (max-width: 520px) {
   .wordWrapper {
     font-size: 20px;
+  }
+  .link {
+    padding-bottom: 0.5%;
   }
 }

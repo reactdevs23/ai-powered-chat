@@ -15,6 +15,9 @@
   cursor: pointer;
   margin-left: auto;
 }
+.arrow.active {
+  color: var(--Primitive-Default);
+}
 .dropdownMain {
   min-width: calc(100% + 5px);
   width: max-content;
@@ -65,9 +68,9 @@
 .listItem.active {
   background: var(--Primitive-0);
 }
-.listItem.active {
+/* .listItem.active {
   color: var(--Heading-Primary);
-}
+} */
 .listItem:hover {
   background: var(--Primary-Default);
   color: var(--Primitive-0);

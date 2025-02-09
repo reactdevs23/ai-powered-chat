@@ -11,7 +11,7 @@
 }
 @media only screen and (max-width: 991px) {
   .wrapper {
-    gap: 64px;
+    gap: 32px;
   }
 }
 @media only screen and (max-width: 767px) {

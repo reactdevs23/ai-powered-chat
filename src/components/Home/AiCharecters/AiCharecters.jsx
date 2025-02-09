@@ -1,7 +1,7 @@
 import { Heading, Text } from "components/common";
 import classes from "./AiCharecters.module.css";
 import clsx from "clsx";
-import ExploreCharacters from "./ExploreCharacters/ExploreCharacters";
+import ExploreCharacters from "../ExploreCharacters/ExploreCharacters";
 
 const AiCharecters = () => {
   const features = [
@@ -19,7 +19,7 @@ const AiCharecters = () => {
     },
   ];
   return (
-    <section className={clsx(classes.wrapper, "sectionPadding", "container")}>
+    <section className={clsx(classes.wrapper, "container")}>
       <div className={clsx(classes.container)}>
         <div className={classes.header}>
           <Heading primitive0 xl5>

@@ -2,11 +2,7 @@ import React, { useEffect, useState } from "react";
 import classes from "./ExploreCharacters.module.css";
 import "./ExploreCharacters.css";
 import clsx from "clsx";
-import {
-  FaChevronCircleLeft,
-  FaChevronCircleRight,
-  FaStar,
-} from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 import { FaCircleChevronRight, FaCircleChevronLeft } from "react-icons/fa6";
 import {
   smartAdvisor,
@@ -18,9 +14,7 @@ import {
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Button, Heading, SectionHeading, Text } from "components/common";
-import { FiPlus } from "react-icons/fi";
-import { FaAngleLeft, FaAngleRight, FaArrowRight } from "react-icons/fa6";
+import { Button, Heading, Text } from "components/common";
 
 const ExploreCharacters = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
