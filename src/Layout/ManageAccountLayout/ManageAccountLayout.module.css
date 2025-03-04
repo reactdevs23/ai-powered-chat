@@ -1,0 +1,23 @@
+.wrapper {
+  padding: 0 16px;
+}
+
+.navItems {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.navItem {
+  padding: 8px 12px;
+  font-size: 14px;
+  color: var(--Primitive-200);
+  font-weight: 500;
+  border-radius: 6px;
+  width: 100%;
+}
+.navItem.active {
+  color: var(--Primitive-Default);
+
+  background: var(--Primitive-transparent-8);
+  backdrop-filter: blur(calc(var(--blur-32, 32px) / 2));
+}

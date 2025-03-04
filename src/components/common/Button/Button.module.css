@@ -13,7 +13,6 @@
   color: var(--Primitive-950);
   cursor: pointer;
   white-space: nowrap;
-
   border-radius: 6px;
   border: none;
 }
@@ -83,8 +82,12 @@
       var(--depth-0, 0px) var(--color-black-60, rgba(0, 0, 0, 0.6));
 }
 .primitiveTransparent8 {
-  background: var(--Primitive-Transparent-8);
+  background: var(--Primitive-transparent-8);
   color: var(--Primitive-Default);
+}
+.primitiveWarning {
+  background: var(--Error-Default);
+  color: var(--Primitive-0);
 }
 .wFull {
   width: 100%;

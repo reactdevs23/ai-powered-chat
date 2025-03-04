@@ -1,0 +1,31 @@
+.connectedAccount {
+  display: grid;
+  grid-template-columns:
+    auto 1fr
+    auto;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  padding: 4px 12px;
+}
+.connectedAccountLogo {
+  max-width: 18px;
+  width: 100%;
+}
+.label {
+  font-size: 13px;
+  color: var(--Primitive-200);
+}
+.connectedAccount .moreButton {
+  padding: 0px;
+}
+
+.moreButton:hover {
+  background: transparent;
+  opacity: 1;
+  transform: translateY(0);
+}
+.moreIcon {
+  font-size: 18px;
+  color: var(--Primitive-500);
+}

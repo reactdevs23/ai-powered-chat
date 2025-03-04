@@ -1,0 +1,103 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.container2FA,
+.userInfo,
+.signinInfo {
+  border: 1px solid var(--Primitive-100);
+  border-radius: 4px;
+}
+.infoBox:last-child {
+  border: none;
+}
+
+.infoBox,
+.header {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--Primitive-100);
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 160px auto;
+  gap: 20px;
+}
+.infoBox {
+  grid-template-columns: auto 1fr auto;
+}
+.header {
+  display: flex;
+
+  justify-content: space-between;
+}
+.logoContainer {
+  max-width: 125px;
+  width: 100%;
+  margin-left: auto;
+}
+.on {
+  padding: 2px 8px;
+  font-size: 14px;
+  margin-left: auto;
+  border-radius: 4px;
+  background: var(--Primitive-Green-500);
+  color: var(--Primitive-0);
+}
+.off {
+  padding: 2px 8px;
+  font-size: 14px;
+  margin-left: auto;
+  border-radius: 4px;
+  background: #ff4864;
+  color: var(--Primitive-0);
+}
+.removeButton,
+.addButton {
+  padding: 0px;
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 72, 100, 0.05);
+  min-height: 100%;
+}
+.addButton {
+  background: rgb(34, 197, 94, 0.05);
+}
+.addButton .icon {
+  color: #22c55e;
+  font-size: 18px;
+}
+.removeButton .icon {
+  color: #ff4864;
+  font-size: 18px;
+}
+.editButton {
+  background: transparent;
+}
+.editButton .icon {
+  color: var(--Primitive-Blue-500);
+}
+
+/* verify identity */
+.verifyIdentity,
+.myWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.myWrapper {
+  max-width: 336px;
+  width: 100%;
+  margin: 0 auto;
+}
+.google,
+.apple {
+  font-size: 24px;
+}
+.appleLogo {
+  color: #000;
+}

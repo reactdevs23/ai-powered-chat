@@ -2,6 +2,7 @@ import { IoClose } from "react-icons/io5";
 import { Heading } from "..";
 import classes from "./Modal.module.css";
 import clsx from "clsx";
+import { devider } from "images";
 
 const Modal = ({
   isActive,
@@ -11,6 +12,7 @@ const Modal = ({
   heading,
   children,
 
+  noHeading,
   ...rest
 }) => {
   return (
@@ -31,14 +33,17 @@ const Modal = ({
         )}
         {...rest}
       >
-        <div className={classes.header}>
-          <Heading primitive200 medium lg>
-            {heading}
-          </Heading>
-          <button className={classes.closeButton} onClick={onClose}>
-            <IoClose className={classes.closeIcon} />
-          </button>
-        </div>
+        {!noHeading && (
+          <div className={clsx(classes.header)}>
+            <Heading primitive50 medium lg>
+              {heading}
+            </Heading>
+            <button className={classes.closeButton} onClick={onClose}>
+              <IoClose className={classes.closeIcon} />
+            </button>
+            <img src={devider} alt="#" className={classes.devider} />
+          </div>
+        )}
         {children}
       </div>
     </>

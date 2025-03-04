@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.modal {
+  background: var(--Primitive-800);
+  max-width: 285px;
+  margin: 0 auto;
+}
+.icon {
+  font-size: 45px;
+  color: var(--Error-Default);
+}
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.cancelButton {
+  background: var(--Primary-transparent-6);
+  color: var(--Primitive-400);
+}

@@ -5,26 +5,26 @@
   --Primitive-Error: #dc4949;
   --Primitive-0: #fff;
   --Primitive-50: #f1f1f1;
-
   --Primitive-300: #c6c6c6;
   --Primitive-400: #a2a2a2;
-
   --Primitive-600: #525252;
-
   --Primitive-800: #222;
   --Primitive-900: #1a1a1a;
   --Primitive-100: #131315;
   --Primitive-700: #d9d9d9;
-
   --border: #4e4e64;
-  --Red: #fe3838;
-  --Yellow: #faef4a;
-  --Green: #77f38a;
+
   /* new */
   --Primitive-Default: #00d995;
   --Primitive-0: #fff;
   --Primitive-50: #e6e7e7;
+  --Primitive-transparent-6: rgba(0, 217, 149, 0.06);
   --Primitive-transparent-8: rgba(0, 217, 149, 0.08);
+  --Primitive-Transparent-8: rgba(0, 217, 149, 0.08);
+  --Primary-transparent-8: rgba(255, 255, 255, 0.08);
+  --Primary-transparent-3: rgba(255, 255, 255, 0.03);
+  --Primary-transparent-6: rgba(255, 255, 255, 0.06);
+  --Primitive-transparent-60: rgba(255, 255, 255, 0.6);
   --Primitive-200: #a8abac;
   --Primitive-300: #8f9394;
   --Primitive-400: #777b7c;
@@ -33,6 +33,9 @@
   --Primitive-900: #131b1d;
   --Primitive-950: #070e10;
   --Primitive-400: #777b7c;
+  --Error-Default: #dc4949;
+  --Yellow: #faef4a;
+  --Green: #77f38a;
 }
 
 * {
@@ -165,4 +168,17 @@ input::placeholder {
   display: flex !important;
   justify-content: center;
   align-items: center;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+}
+input:-internal-autofill-selected {
+  background-color: transparent !important;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 0s 600000s, color 0s 600000s !important;
 }

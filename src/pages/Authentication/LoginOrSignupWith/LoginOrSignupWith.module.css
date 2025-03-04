@@ -1,0 +1,27 @@
+.container {
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 57px;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: var(--radius-8, 8px);
+  background: var(--Primary-Transparent-3);
+  transition: 0.3s;
+}
+.iconContainer:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
+}
+.icon {
+  max-width: 20px;
+  width: 100%;
+}

@@ -1,0 +1,131 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.infoBox {
+  padding: 12px;
+  border-radius: var(--radius-8, 8px);
+  background: var(--Primary-transparent-3, rgba(255, 255, 255, 0.03));
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 0px;
+}
+.label {
+  font-size: 13px;
+  color: var(--Primitive-200);
+}
+.labelHeading {
+  padding-bottom: 6px;
+}
+
+.userImgBox {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.userImgContainer {
+  position: relative;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 1px solid var(--Primary-transparent-8);
+
+  mix-blend-mode: difference;
+}
+.userImg {
+  max-width: 56px;
+  aspect-ratio: 1/1;
+  width: 100%;
+
+  border-radius: 8px;
+}
+.userImgChange {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  right: 0;
+  z-index: 1;
+  border-radius: 0px;
+  background: rgba(0, 217, 149, 0.6);
+  border-radius: 0 0 8px 8px;
+  backdrop-filter: blur(calc(var(--blur-32, 32px) / 2));
+  padding: 4px;
+  cursor: pointer;
+}
+.spaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.wrapper .editButton,
+.wrapper .editedButton,
+.wrapper .closeButton {
+  padding: 0px;
+}
+
+.editButton:hover,
+.editedButton:hover,
+.closeButton:hover {
+  background: transparent;
+  opacity: 1;
+  transform: translateY(0);
+}
+.editIcon,
+.checkedIcon,
+.closeIcon {
+  font-size: 18px;
+  color: var(--Primitive-500);
+}
+.checkedIcon {
+  color: var(--Primitive-Default);
+}
+.editButton:hover .editIcon,
+.closeButton:hover .closeIcon:hover {
+  color: var(--Primitive-0);
+}
+.input {
+  padding: 8px 14px;
+}
+.input input {
+  font-size: 14px;
+}
+.warning {
+  color: var(--Error-Default);
+}
+.connectedAccountContainer {
+  padding: 0;
+}
+.connectedAccountHeading {
+  padding: 4px 12px;
+  padding-bottom: 12px;
+  position: relative;
+  width: 100%;
+}
+.devider {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  top: auto;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.addButton {
+  margin-top: 6px;
+}

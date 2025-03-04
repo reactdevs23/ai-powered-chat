@@ -13,6 +13,9 @@
 .primitive50 {
   color: var(--Primitive-50);
 }
+.PrimitiveTransparent60 {
+  color: var(--Primitive-transparent-60);
+}
 .primitive100 {
   color: var(--Primitive-100);
 }

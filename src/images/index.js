@@ -9,6 +9,17 @@ import aiCharacterImg from "./aiCharacters.svg";
 import conversationsImg from "./conversations.svg";
 import assistanceImg from "./assistance.svg";
 import checkMarkIcon from "./checkMark.svg";
+import devider from "./divider.svg";
+
+// socialLogo
+import googleLogo from "./socialLogo/google.png";
+import fbLogo from "./socialLogo/fb.png";
+import githubLogo from "./socialLogo/github.png";
+import appleLogo from "./socialLogo/apple.png";
+import discordLogo from "./socialLogo/discord.png";
+
+import successIcon from "./successIcon.png";
+import userImgPlaceholder from "./manageAccount/userImgPlaceholder.png";
 
 export {
   logo,
@@ -22,4 +33,16 @@ export {
   assistanceImg,
   checkMarkIcon,
   smallLogo,
+  devider,
+
+  // social
+  googleLogo,
+  fbLogo,
+  githubLogo,
+  appleLogo,
+  discordLogo,
+  successIcon,
+
+  // manageAccount
+  userImgPlaceholder,
 };

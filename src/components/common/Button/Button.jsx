@@ -15,7 +15,7 @@ const Button = ({
 
   primitive800,
   primitiveTransparent8,
-
+  primitiveWarning,
   wFull,
   className,
   to,
@@ -24,7 +24,6 @@ const Button = ({
   sm,
   lg,
   radius,
-
   ...rest
 }) => {
   return (
@@ -35,7 +34,6 @@ const Button = ({
           className={clsx(
             className,
             classes.button,
-
             radius && classes.radius,
             base && classes.base,
             sm && classes.sm,
@@ -45,6 +43,8 @@ const Button = ({
             primary && classes.primary,
             transparent && classes.transparent,
             primitiveTransparent8 && classes.primitiveTransparent8,
+            primitiveWarning && classes.primitiveWarning,
+
             wFull && classes.wFull,
             loading && classes.loading
           )}
@@ -76,6 +76,7 @@ const Button = ({
             primary && classes.primary,
             transparent && classes.transparent,
             primitiveTransparent8 && classes.primitiveTransparent8,
+            primitiveWarning && classes.primitiveWarning,
             wFull && classes.wFull,
             loading && classes.loading
           )}
@@ -108,6 +109,7 @@ const Button = ({
             primary && classes.primary,
             transparent && classes.transparent,
             primitiveTransparent8 && classes.primitiveTransparent8,
+            primitiveWarning && classes.primitiveWarning,
             wFull && classes.wFull,
             loading && classes.loading
           )}
@@ -138,6 +140,7 @@ const Button = ({
             primary && classes.primary,
             transparent && classes.transparent,
             primitiveTransparent8 && classes.primitiveTransparent8,
+            primitiveWarning && classes.primitiveWarning,
             wFull && classes.wFull,
             loading && classes.loading
           )}

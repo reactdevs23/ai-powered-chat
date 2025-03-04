@@ -16,12 +16,19 @@
   display: flex;
   align-items: center;
   gap: 8px;
-
+  min-height: 42px;
   width: 100%;
-  border: 1px solid var(--Primitive-800);
+
   padding: 10px 16px;
   border-radius: 12px;
-  background: var(--Primitive-900);
+
+  border-radius: var(--radius-8, 8px);
+  border: 1px solid var(--Primary-transparent-8);
+  background: var(--Primary-transparent-6);
+  box-shadow: var(--depth-0, 0px) var(--depth-1, 1px) var(--blur-2, 2px)
+      var(--depth-0, 0px) var(--color-black-32, rgba(0, 0, 0, 0.32)),
+    var(--depth-0, 0px) var(--depth-0, 0px) var(--blur-1, 1px)
+      var(--depth-0, 0px) var(--color-black-24, rgba(0, 0, 0, 0.24));
 }
 
 .searchIconInputContainer {
@@ -59,6 +66,6 @@
 }
 .eye {
   cursor: pointer;
-  font-size: 20px;
+  font-size: 18px;
   color: var(--Primitive-400);
 }

@@ -38,13 +38,14 @@
   overflow-y: auto;
 
   overflow: auto;
-  border-radius: 8px;
+  border-radius: 12px;
   background: var(--Primitive-900);
   box-shadow: 0px -40px 64px -16px rgba(0, 0, 0, 0.2);
+
   bottom: 20px;
 
-  padding: 24px;
-  padding-top: 0 !important;
+  padding: 16px 0px;
+  padding-bottom: 0;
 }
 
 .modalOverlay.active {
@@ -61,15 +62,25 @@
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid var(--Primitive-800);
+  padding: 0 20px;
+  padding-bottom: 16px;
+
   position: sticky;
   top: 0;
   z-index: 1;
   background: var(--Primitive-900);
-  padding-top: 18px;
+  border-bottom: 1px solid var(--Primary-transparent-8);
+  position: relative;
 }
 
+.devider {
+  position: absolute;
+  bottom: 0;
+  width: calc(100%);
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+}
 .closeButton {
   margin-left: auto;
 
@@ -79,11 +90,12 @@
   cursor: pointer;
 }
 .closeIcon {
-  color: var(--Primitive-600);
-  font-size: 28px;
+  color: var(--Primitive-500);
+  font-size: 20px;
 }
 @media only screen and (max-width: 767px) {
   .modal {
-    padding: 24px;
+    padding: 16px 0px;
+    padding-bottom: 0;
   }
 }

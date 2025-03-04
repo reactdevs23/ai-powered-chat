@@ -1,0 +1,16 @@
+.wrapper {
+  border: 1px solid var(--Primitive-100);
+  border-radius: 4px;
+}
+.infoBox,
+.header {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--Primitive-100);
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr auto auto;
+  gap: 20px;
+}
+.infoBox:last-child {
+  border: none;
+}
