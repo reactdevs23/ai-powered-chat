@@ -21,6 +21,7 @@ const WarningModal = ({ isActive, onClose, removeHandler, info }) => {
             primitive800
             className={classes.cancelButton}
             onClick={onClose}
+            sm
           >
             Cancel
           </Button>
@@ -30,6 +31,7 @@ const WarningModal = ({ isActive, onClose, removeHandler, info }) => {
               removeHandler();
               onClose();
             }}
+            sm
           >
             Remove
           </Button>

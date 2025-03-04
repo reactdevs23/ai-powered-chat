@@ -20,7 +20,7 @@
   width: 100%;
 
   padding: 10px 16px;
-  border-radius: 12px;
+  border-radius: 8px;
 
   border-radius: var(--radius-8, 8px);
   border: 1px solid var(--Primary-transparent-8);
@@ -30,7 +30,11 @@
     var(--depth-0, 0px) var(--depth-0, 0px) var(--blur-1, 1px)
       var(--depth-0, 0px) var(--color-black-24, rgba(0, 0, 0, 0.24));
 }
-
+.sm {
+  min-height: 32px;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
 .searchIconInputContainer {
   padding: 10px 12px;
 }

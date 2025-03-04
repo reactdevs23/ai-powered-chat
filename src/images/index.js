@@ -10,6 +10,7 @@ import conversationsImg from "./conversations.svg";
 import assistanceImg from "./assistance.svg";
 import checkMarkIcon from "./checkMark.svg";
 import devider from "./divider.svg";
+import devider2 from "./devider2.svg";
 
 // socialLogo
 import googleLogo from "./socialLogo/google.png";
@@ -17,9 +18,12 @@ import fbLogo from "./socialLogo/fb.png";
 import githubLogo from "./socialLogo/github.png";
 import appleLogo from "./socialLogo/apple.png";
 import discordLogo from "./socialLogo/discord.png";
-
+// manage account
 import successIcon from "./successIcon.png";
 import userImgPlaceholder from "./manageAccount/userImgPlaceholder.png";
+import googleAuthenticator from "./manageAccount/googleAuthenticator.png";
+import macBookImg from "./manageAccount/macBook.png";
+import andoiredImg from "./manageAccount/andoired.png";
 
 export {
   logo,
@@ -34,6 +38,7 @@ export {
   checkMarkIcon,
   smallLogo,
   devider,
+  devider2,
 
   // social
   googleLogo,
@@ -45,4 +50,7 @@ export {
 
   // manageAccount
   userImgPlaceholder,
+  googleAuthenticator,
+  macBookImg,
+  andoiredImg,
 };

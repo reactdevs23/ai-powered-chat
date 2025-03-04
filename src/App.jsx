@@ -10,6 +10,8 @@ import ForgotPassword from "pages/Authentication/ForgotPassword/ForgotPassword";
 import MainLayout from "Layout/MainLayout/MainLayout";
 import ManageAccountLayout from "Layout/ManageAccountLayout/ManageAccountLayout";
 import Profile from "pages/ManageAccount/Profile/Profile";
+import Security from "pages/ManageAccount/Security/Security";
+
 function App() {
   useEffect(() => {
     Aos.init({
@@ -46,7 +48,7 @@ function App() {
       {/* End Landing */}
       <Route path="manage-account/" element={<ManageAccountLayout />}>
         <Route path="profile" element={<Profile />} />
-        <Route path="security" element={<Profile />} />
+        <Route path="security" element={<Security />} />
         <Route path="subscription" element={<Profile />} />
         <Route path="chat-data" element={<Profile />} />
       </Route>

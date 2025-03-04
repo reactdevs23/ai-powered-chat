@@ -20,6 +20,7 @@ const Input = ({
   label,
   name,
   textarea,
+  sm,
 }) => {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -37,7 +38,8 @@ const Input = ({
       className={clsx(
         classes.inputContainer,
         className,
-        search && classes.searchIconInputContainer
+        search && classes.searchIconInputContainer,
+        sm && classes.sm
       )}
     >
       {textarea ? (

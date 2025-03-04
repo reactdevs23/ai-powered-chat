@@ -1,8 +1,8 @@
 .switch {
-  width: 50px;
-  height: 26px;
+  width: 36px;
+  height: 20px;
   border-radius: 34px;
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: var(--Primitive-500);
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -12,35 +12,35 @@
 }
 
 .switch.checked {
-  background-color: #187bfc;
+  background-color: var(--Primitive-Default);
 }
 
 .slider {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
-  background-color: var(--Primitive-0);
+  background-color: var(--Primitive-900);
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
-  transform: translateX(1px);
+  transform: translateX(0px);
   left: 0;
 
   transition: 0.3s ease;
 }
 
 .switch.checked .slider {
-  transform: translateX(24px);
+  transform: translateX(15px);
 }
 
-.icon {
+/* .icon {
   font-size: 12px;
   color: #187bfc;
   transition: 0.3s ease;
-}
-
+} */
+/* 
 .switch:not(.checked) .icon {
   color: var(--Primitive-600);
   opacity: 0.8;
-}
+} */

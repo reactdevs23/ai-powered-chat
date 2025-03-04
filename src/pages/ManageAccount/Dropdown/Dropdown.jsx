@@ -15,22 +15,9 @@ const Dropdown = ({
 }) => {
   const ref = useRef(null);
   const dropdownRef = useRef(null);
-  const [dropUp, setDropUp] = useState(false);
 
   // Close dropdown when clicking outside
   useOnClickOutside(ref, () => setIsActive(false));
-
-  // Adjust dropdown position based on space available
-  useEffect(() => {
-    if (isActive && dropdownRef.current) {
-      const dropdownRect = dropdownRef.current.getBoundingClientRect();
-      const spaceBelow = window.innerHeight - dropdownRect.bottom;
-      const spaceAbove = dropdownRect.top;
-
-      // Check if dropdown should open upwards
-      setDropUp(spaceBelow < 200 && spaceAbove > spaceBelow);
-    }
-  }, [isActive]);
 
   return (
     <div className={clsx(classes.dropdown, v2 && classes.wFull)} ref={ref}>
@@ -40,7 +27,7 @@ const Dropdown = ({
         className={clsx(
           classes.dropdownMain,
           isActive && classes.active,
-          dropUp && classes.dropUp,
+
           v2 && classes.v2
         )}
         role="listbox"
@@ -58,7 +45,6 @@ const Dropdown = ({
                 setIsActive(false);
                 onSelect(item);
               }}
-              role="option"
             >
               {v2 ? (
                 <>

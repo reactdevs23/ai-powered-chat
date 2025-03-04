@@ -1,8 +1,13 @@
 import Modal from "components/common/Modal/Modal";
 import classes from "./ManageAccountLayout.module.css";
 import { useState } from "react";
+import { PiSidebar } from "react-icons/pi";
+
 import { NavLink, Outlet } from "react-router-dom";
 import clsx from "clsx";
+import { devider, devider2 } from "images";
+import { Heading } from "components/common";
+import { IoClose } from "react-icons/io5";
 const navItems = [
   {
     navItem: "Profile",
@@ -25,34 +30,61 @@ const navItems = [
 ];
 
 const ManageAccountLayout = () => {
-  const [isModalActive, setIsModalActive] = useState(true);
   const [isSidebarActive, setIsSidebarActive] = useState(false);
   return (
     <Modal
-      isActive={isModalActive}
-      onClose={() => setIsModalActive(false)}
-      heading="Manage Account"
+      className={classes.modal}
+      isActive={true}
+      onClose={() => {}}
+      noHeading
     >
+      <div className={clsx(classes.header)}>
+        {isSidebarActive ? (
+          <button
+            onClick={() => setIsSidebarActive((prev) => !prev)}
+            className={classes.sidebarCloseIcon}
+          >
+            <IoClose />
+          </button>
+        ) : (
+          <button
+            onClick={() => setIsSidebarActive((prev) => !prev)}
+            className={classes.sidebarIcon}
+          >
+            <PiSidebar />
+          </button>
+        )}
+
+        <Heading primitive50 medium lg>
+          Manage Account
+        </Heading>
+        <button
+          className={classes.closeButton}
+          // onClick={() => setIsModalActive(false)}
+        >
+          <IoClose className={classes.closeIcon} />
+        </button>
+        <img src={devider} alt="#" className={classes.devider2} />
+      </div>
       <div className={classes.wrapper}>
-        <div className={classes.navItems}>
+        <div
+          className={clsx(classes.navItems, isSidebarActive && classes.sidebar)}
+        >
           {navItems.map(({ navItem, to }, id) => {
             return (
-              <div
+              <NavLink
                 key={"manage-account-nav-item-" + id}
-                className={clsx(classes.navItems)}
                 onClick={() => setIsSidebarActive(false)}
+                to={to}
+                className={({ isActive }) => {
+                  return clsx(isActive && classes.active, classes.navItem);
+                }}
               >
-                <NavLink
-                  to={to}
-                  className={({ isActive }) => {
-                    return clsx(isActive && classes.active, classes.navItem);
-                  }}
-                >
-                  {navItem}
-                </NavLink>
-              </div>
+                {navItem}
+              </NavLink>
             );
           })}
+          <img src={devider2} alt="#" className={classes.devider} />
         </div>
         <Outlet />
       </div>

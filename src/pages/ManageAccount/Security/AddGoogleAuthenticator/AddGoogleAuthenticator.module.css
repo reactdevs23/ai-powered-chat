@@ -4,13 +4,21 @@
   gap: 16px;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding-bottom: 20px;
+  max-width: 240px;
+  margin: 0 auto;
 }
 .modal {
   background: var(--Primitive-800);
   max-width: 285px;
   margin: 0 auto;
 }
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
 .icon {
   font-size: 45px;
   color: var(--Error-Default);
@@ -24,4 +32,9 @@
 .cancelButton {
   background: var(--Primary-transparent-6);
   color: var(--Primitive-400);
+}
+.qrCodeWrapper {
+  background: var(--Primitive-0);
+  border-radius: 4px;
+  padding: 4px;
 }

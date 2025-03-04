@@ -12,7 +12,7 @@ const Switch = ({ isChecked, setIsChecked }) => {
       onClick={handleToggle}
     >
       <div className={classes.slider}>
-        <span className={classes.icon}> {isChecked ? "✓" : "✕"}</span>
+        {/* <span className={classes.icon}> {isChecked ? "✓" : "✕"}</span> */}
       </div>
     </div>
   );
