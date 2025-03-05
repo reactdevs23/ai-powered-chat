@@ -11,6 +11,7 @@ import MainLayout from "Layout/MainLayout/MainLayout";
 import ManageAccountLayout from "Layout/ManageAccountLayout/ManageAccountLayout";
 import Profile from "pages/ManageAccount/Profile/Profile";
 import Security from "pages/ManageAccount/Security/Security";
+import Subscription from "pages/ManageAccount/Subscription/Subscription";
 
 function App() {
   useEffect(() => {
@@ -49,7 +50,7 @@ function App() {
       <Route path="manage-account/" element={<ManageAccountLayout />}>
         <Route path="profile" element={<Profile />} />
         <Route path="security" element={<Security />} />
-        <Route path="subscription" element={<Profile />} />
+        <Route path="subscription" element={<Subscription />} />
         <Route path="chat-data" element={<Profile />} />
       </Route>
     </Routes>

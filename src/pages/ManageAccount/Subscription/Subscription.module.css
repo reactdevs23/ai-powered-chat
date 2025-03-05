@@ -1,0 +1,62 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px 0px;
+  padding-bottom: 0;
+  background: var(--Primary-transparent-3);
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 12px;
+  padding-bottom: 12px;
+
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  border-bottom: 1px solid var(--Primary-transparent-8);
+  position: relative;
+}
+
+.devider {
+  position: absolute;
+  bottom: 0;
+  width: calc(100%);
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+}
+.freePlanButton {
+  margin-left: auto;
+
+  font-size: 13px;
+  background: transparent;
+
+  cursor: pointer;
+  padding: 4px 10px;
+}
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 200px;
+  margin: 0 auto;
+  width: 90%;
+}
+.planImg {
+  max-width: 32px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.info {
+  font-size: 13px;
+}
+.button {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}

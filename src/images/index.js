@@ -24,6 +24,7 @@ import userImgPlaceholder from "./manageAccount/userImgPlaceholder.png";
 import googleAuthenticator from "./manageAccount/googleAuthenticator.png";
 import macBookImg from "./manageAccount/macBook.png";
 import andoiredImg from "./manageAccount/andoired.png";
+import planImg from "./manageAccount/planImg.png";
 
 export {
   logo,
@@ -53,4 +54,5 @@ export {
   googleAuthenticator,
   macBookImg,
   andoiredImg,
+  planImg,
 };
