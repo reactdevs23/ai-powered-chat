@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-
+import { erpIcon, faqIcon, loadManagementIcon, reportIcon } from "images";
 // Create the context
 const AppContext = createContext();
 
@@ -7,6 +7,25 @@ const AppContext = createContext();
 export const ContextProvider = ({ children }) => {
   const [showConnectWalletModal, setShowConnectWalletModal] = useState(null); // Simple state management
   const [connectedWallet, setConnectedWallet] = useState();
+  const aiCharacters = [
+    {
+      icon: erpIcon,
+
+      character: "Best Languages for ERP",
+    },
+    {
+      icon: faqIcon,
+      character: "FAQ & Knowledge Base",
+    },
+    {
+      icon: reportIcon,
+      character: "Team Productivity Reports",
+    },
+    {
+      icon: loadManagementIcon,
+      character: "Lead Management & Follow-ups",
+    },
+  ];
   return (
     <AppContext.Provider
       value={{
@@ -14,6 +33,7 @@ export const ContextProvider = ({ children }) => {
         setShowConnectWalletModal,
         connectedWallet,
         setConnectedWallet,
+        aiCharacters,
       }}
     >
       {children}

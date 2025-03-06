@@ -70,6 +70,9 @@ import reportIcon from "./characters/reports.png";
 import faqIcon from "./characters/faq.png";
 import loadManagementIcon from "./characters/loadManagement.png";
 
+// chat screen
+import botLogo from "./chatScreen/botLogo.png";
+
 export {
   logo,
   smartAdvisor,
@@ -142,4 +145,7 @@ export {
   reportIcon,
   faqIcon,
   loadManagementIcon,
+
+  // chat screen
+  botLogo,
 };

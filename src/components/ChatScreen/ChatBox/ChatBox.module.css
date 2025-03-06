@@ -1,0 +1,121 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  height: 100vh; /* Take the full height of the viewport */
+  overflow: hidden; /* Prevent the wrapper from scrolling */
+  background: transparent;
+}
+
+.chatBox {
+  overflow-y: auto;
+  flex-grow: 1; /* Makes the chat box take up available space */
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.userMessage {
+  align-self: flex-end;
+
+  color: var(--Primary-transparent-80);
+  padding: 8px 12px;
+
+  max-width: 70%;
+  border-radius: var(--radius-8, 8px);
+  border: 1px solid var(--Primary-transparent-6);
+  background: var(--Primary-transparent-6);
+}
+
+.inputWrapper {
+  border-radius: 8px;
+  background: var(--Primary-transparent-3);
+  position: relative;
+  border-bottom: 1px solid var(--Primitive-950);
+}
+
+.inputWrapper .input {
+  border: none;
+  border-bottom: 1px solid var(--Primary-transparent-8);
+  background: transparent;
+  border-radius: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding: 15px 12px;
+  box-shadow: none;
+}
+
+.sendContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+  padding: 12px;
+  position: relative;
+}
+.devider {
+  position: absolute;
+  top: 0;
+  bottom: auto;
+}
+.sendButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  padding: 6px;
+  background: var(--Primitive-Default);
+  backdrop-filter: blur(calc(var(--blur-32, 32px) / 2));
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--Primitive-950);
+}
+
+.tagButtons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tagButton {
+  height: 36px;
+  min-width: 36px;
+  padding: 8px 10px;
+  color: var(--Primary-transparent-60);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  border-radius: var(--radius-6, 6px);
+  border: 1px solid var(--Primary-transparent-3);
+  background: var(--Primary-transparent-3);
+  backdrop-filter: blur(calc(var(--blur-32, 32px) / 2));
+  cursor: pointer;
+}
+
+.addIcon {
+  font-size: 20px;
+}
+
+.aiChrecters {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+
+  margin-bottom: 20px;
+}
+
+.wrapper .seAllButton {
+  height: 100%;
+  align-self: stretch;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.wrapper .seAllButton:hover {
+  transform: translateY(0);
+}

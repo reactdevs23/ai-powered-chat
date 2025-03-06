@@ -27,6 +27,7 @@ import { Button, Heading, Input, Text } from "components/common";
 
 import clsx from "clsx";
 import { MdClose } from "react-icons/md";
+import Devider2 from "components/common/Devider2/Devider";
 const navItems = [
   {
     icons: [newChatIcon, newChatActiveIcon],
@@ -166,9 +167,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
             ))}
           </div>
         </div>{" "}
-        <div className={classes.deviderContainer}>
-          <img src={devider} alt="#" className={classes.devider} />
-        </div>
+        <Devider2 />
         <div className={classes.aiCharacters}>
           <Text primitive400 xs className={classes.label}>
             Chat with characters
@@ -210,9 +209,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
             </Text>
           </div>
         </div>{" "}
-        <div className={classes.deviderContainer}>
-          <img src={devider} alt="#" className={classes.devider} />
-        </div>
+        <Devider2 />
         <div className={classes.userContainer}>
           <img src={userImg} alt="#" className={classes.userImg} />
           <div>
@@ -224,9 +221,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
             </Button>
           </div>
         </div>
-        <div className={classes.deviderContainer}>
-          <img src={devider} alt="#" className={classes.devider} />
-        </div>
+        <Devider2 />>
         <div>
           <button className={classes.navItem}>
             <img src={helpAndSupportIcon} alt="#" className={classes.navIcon} />

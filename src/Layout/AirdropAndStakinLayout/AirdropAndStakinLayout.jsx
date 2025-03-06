@@ -5,6 +5,7 @@ import ConnectWalletModal from "Modals/ConnectWalletModal/ConnectWalletModal";
 import { useAppContext } from "ContextProvider/ContextProvider";
 import Sidebar from "./Sidebar/Sidebar";
 import { useState } from "react";
+import clsx from "clsx";
 
 const AirdropAndStakinLayout = () => {
   const {
@@ -19,7 +20,7 @@ const AirdropAndStakinLayout = () => {
     <main className={classses.wrapper}>
       <Navbar setSidebar={setSidebar} />
       <Sidebar sidebar={sidebar} setSidebar={setSidebar} />
-      <div className={classses.container}>
+      <div className={clsx(classses.container, "container2")}>
         <Outlet />
       </div>
       <ConnectWalletModal

@@ -36,6 +36,9 @@
   background: var(--Primitive-800);
   color: var(--Primitive-400);
 }
+.primitive800:hover {
+  background: var(--Primitive-transparent-8);
+}
 .btnPrimary,
 .primary {
   color: var(--Primitive-Default);

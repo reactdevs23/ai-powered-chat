@@ -1,0 +1,48 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.botMessage {
+  align-self: flex-start;
+
+  color: var(--Primary-transparent-100);
+  padding: 8px 0px;
+
+  max-width: 90%;
+}
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.botLogo {
+  max-width: 32px;
+  width: 100%;
+}
+.info {
+  font-size: 13px;
+}
+.buttonContainer {
+  display: flex;
+  align-items: center;
+}
+.actionContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.actionButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--Primary-transparent-40);
+  font-size: 18px;
+  cursor: pointer;
+}
+.actionButton:hover {
+  color: var(--Primary-transparent-80);
+}
+.actionButton .checkMark {
+  color: var(--Primitive-Default);
+}

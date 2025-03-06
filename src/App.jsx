@@ -17,6 +17,9 @@ import ClaimAirdrop from "pages/ClaimAirdrop/ClaimAirdrop";
 import AirdropAndStakinLayout from "Layout/AirdropAndStakinLayout/AirdropAndStakinLayout";
 import Staking from "pages/Staking/Staking";
 
+import ChatScreen from "pages/ChatScreen/ChatScreen";
+import ChatScreenLayout from "Layout/ChatScreenLayout/ChatScreenLayout";
+
 function App() {
   useEffect(() => {
     Aos.init({
@@ -62,6 +65,9 @@ function App() {
         <Route path="security" element={<Security />} />
         <Route path="subscription" element={<Subscription />} />
         <Route path="chat-data" element={<ChatData />} />
+      </Route>
+      <Route path="/" element={<ChatScreenLayout />}>
+        <Route path="chat-screen" element={<ChatScreen />} />
       </Route>
     </Routes>
   );
