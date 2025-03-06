@@ -17,12 +17,18 @@
   /* new */
   --Primitive-Default: #00d995;
   --Primitive-0: #fff;
+  --Primitive-25: #f5f6f6;
   --Primitive-50: #e6e7e7;
+  --Primitive-100: #c1c3c4;
   --Primitive-transparent-6: rgba(0, 217, 149, 0.06);
   --Primitive-transparent-8: rgba(0, 217, 149, 0.08);
   --Primitive-Transparent-8: rgba(0, 217, 149, 0.08);
   --Primary-transparent-8: rgba(255, 255, 255, 0.08);
   --Primary-transparent-3: rgba(255, 255, 255, 0.03);
+  --Primary-transparent-32: rgba(255, 255, 255, 0.32);
+  --Primary-transparent-48: rgba(255, 255, 255, 0.48);
+  --Primary-transparent-24: rgba(255, 255, 255, 0.24);
+  --Primary-transparent-60: rgba(255, 255, 255, 0.6);
   --Primary-transparent-6: rgba(255, 255, 255, 0.06);
   --Primitive-transparent-60: rgba(255, 255, 255, 0.6);
   --Primitive-200: #a8abac;
@@ -35,6 +41,8 @@
   --Primitive-950: #070e10;
   --Primitive-400: #777b7c;
   --Error-Default: #dc4949;
+  --Warning-Default: #fead34;
+  --Warning-transparent-8: rgba(254, 173, 52, 0.08);
   --Yellow: #faef4a;
   --Green: #77f38a;
 }
@@ -103,35 +111,34 @@ button:hover {
     width: 90%;
   }
 }
-::-webkit-scrollbar {
-  width: 4px;
+/* ::-webkit-scrollbar {
+  width: 1px;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--Primitive-600);
   border-radius: 4px;
-}
+} */
 .overflow {
   scrollbar-width: thin;
-  scrollbar-color: var(--Primitive-600) rgba(250, 250, 250, 0.2);
-  border-radius: 5px;
+  scrollbar-color: var(--Primitive-Default) rgba(250, 250, 250, 0.2);
+  border-radius: 4px;
 }
 
 /* Chrome, Edge, and Safari browsers */
 .overflow::-webkit-scrollbar {
-  width: 3px;
   border-radius: 5px;
+  width: 1px;
 }
 .overflow::-webkit-scrollbar-track {
   background: rgba(250, 250, 250, 0.2);
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 .overflow::-webkit-scrollbar-thumb {
-  background: var(--Primitive-600);
-  border-radius: 100vh;
-  border: none;
-  border-radius: 5px;
+  background: var(--Primitive-Default);
+
+  border-radius: 4px;
 }
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,

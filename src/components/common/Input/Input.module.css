@@ -37,14 +37,20 @@
 }
 .searchIconInputContainer {
   padding: 10px 12px;
+  padding-right: 35px;
+  position: relative;
 }
-
+.searchIconInputContainer .close {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+}
 .searchIcon {
   font-size: 20px;
-
   margin-top: 2px;
   cursor: pointer;
-  color: var(--Primitive-500);
+  color: var(--Primitive-400);
 }
 .input {
   color: var(--Primitive-300);

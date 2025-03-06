@@ -1,0 +1,205 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  padding: 10px;
+  background: var(--Primary-transparent-3);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 240px;
+  overflow-y: auto;
+  z-index: 200;
+  padding-bottom: 24px;
+}
+.sidebar .searchContainer {
+  height: 28px;
+}
+.navItemsContainer,
+.chatsAndCharacters,
+.userWrapper {
+  border-radius: 12px;
+  background: var(--Primary-transparent-3);
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.navItemsContainer {
+  padding: 10px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  width: 100%;
+}
+.logo {
+  max-width: 26px;
+}
+.sidebarButton {
+  color: var(--Primary-transparent-48);
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  cursor: pointer;
+  display: none;
+}
+.navItems {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.navItem {
+  padding: 10px 12px;
+  font-size: 14px;
+  color: var(--Primitive-200);
+  font-weight: 500;
+  border-radius: 6px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+.navItem.navActive {
+  color: var(--Primitive-Default);
+
+  background: var(--Primitive-transparent-8);
+  backdrop-filter: blur(calc(var(--blur-32, 32px) / 2));
+}
+.navIcon {
+  max-width: 18px;
+  width: 100%;
+}
+
+.chatsAndCharacters {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.regularChats,
+.aiCharacters {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+  padding: 10px;
+}
+.deviderContainer {
+  border-bottom: 1px solid var(--Primary-transparent-8);
+  height: 3px;
+}
+.devider {
+  width: 100%;
+}
+.aiCharacters {
+  gap: 6px;
+}
+.chats,
+.characters {
+  display: flex;
+  flex-direction: column;
+}
+.chatContainer {
+  padding: 8px;
+  cursor: pointer;
+}
+.label {
+  padding: 0 8px;
+}
+.chat {
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.character {
+  padding: 8px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+.activeCharacter,
+.activeChatContainer {
+  background: var(--Primitive-transparent-8);
+  border-radius: 6px;
+}
+
+.characterName {
+  max-width: 190px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.characterIcon {
+  max-width: 20px;
+  width: 100%;
+  border-radius: 50%;
+}
+.activeChatContainer .chat,
+.activeCharacter .characterName {
+  color: var(--Primitive-Default);
+}
+
+.upgradePlan {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  background: url(../../../images/sidebar/upgradePlanArt.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px;
+}
+.planImg {
+  max-width: 26px;
+  width: 100%;
+}
+.upgradeInfo {
+  color: var(--Primary-transparent-48);
+  margin-top: 4px;
+}
+.userContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.userImg {
+  max-width: 44px;
+  width: 100%;
+  border-radius: 8px;
+}
+.userWrapper .freePlanButton {
+  padding: 2px 6px;
+  font-size: 12px;
+  margin-top: 8px;
+  border-radius: 4px;
+}
+@media only screen and (max-width: 1199px) {
+  .sidebar {
+    transform: translateX(-250%);
+    transition: 0.3s;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background: var(--Primitive-900);
+  }
+
+  .showSidebar {
+    transform: translateX(0);
+    right: 0;
+  }
+  .sidebarButton {
+    display: block;
+  }
+}

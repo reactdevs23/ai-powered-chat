@@ -2,10 +2,16 @@ import classes from "./Services.module.css";
 import clsx from "clsx";
 import TextRevealByWord from "components/common/TextAnimation/TextAnimation";
 import Card from "./Card/Card";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
-  const handleJoinNow = () => {};
-  const handleClaimNow = () => {};
+  const navigate = useNavigate();
+  const handleJoinNow = () => {
+    navigate("/login");
+  };
+  const handleClaimNow = () => {
+    navigate("/claim-airdrop");
+  };
   return (
     <section
       className={clsx(classes.wrapper, "container", "sectionPadding")}

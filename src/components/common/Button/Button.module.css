@@ -2,7 +2,7 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 150%;
+  line-height: 100%;
   letter-spacing: -0.2px;
   display: flex;
   justify-content: center;
@@ -21,7 +21,8 @@
   border-radius: 24px;
 }
 .base {
-  font-size: 14px;
+  font-size: 16px;
+  padding: 12px 16px;
 }
 .sm {
   font-size: 13px;
@@ -113,5 +114,9 @@
   .button {
     font-size: 14px;
     padding: 12px 16px;
+  }
+  .sm {
+    font-size: 13px;
+    padding: 8px 10px;
   }
 }

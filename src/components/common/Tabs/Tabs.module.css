@@ -1,11 +1,15 @@
 .tabs {
-  border-radius: 6px;
-  background: var(--Primitive-900);
   display: flex;
 
   align-items: center;
   flex-wrap: wrap;
   padding: 2px;
+  border-radius: var(--radius-8, 8px);
+  border: 1px solid var(--Primary-transparent-6);
+  background: var(--Primitive-900);
+
+  /* background-blur/32 */
+  backdrop-filter: blur(calc(var(--blur-32, 32px) / 2));
 }
 .buySell {
   display: grid;
@@ -25,6 +29,10 @@
   padding: 8px 20px;
   background: transparent;
   cursor: pointer;
+}
+.sm .tab {
+  font-size: 14px;
+  padding: 6px 15px;
 }
 .tab:hover {
   transform: translate(0);

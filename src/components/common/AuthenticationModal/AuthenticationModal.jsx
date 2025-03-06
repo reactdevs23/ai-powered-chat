@@ -4,12 +4,13 @@ import Modal from "../Modal/Modal";
 import { useNavigate } from "react-router-dom";
 import { Text } from "..";
 
-const AuthenticationModal = ({ heading, children, info }) => {
+const AuthenticationModal = ({ heading, children, info, onClose }) => {
   const [isActive, setIsActive] = useState(true);
   const navigate = useNavigate();
   const handleClose = () => {
     setIsActive(false);
-    navigate(-1);
+    onClose && onClose();
+    !onClose && navigate("/login");
   };
   return (
     <Modal

@@ -1,11 +1,12 @@
 .wrapper {
-  padding: 96px 0cqi;
+  border-radius: 12px;
+  background: var(--Primary-transparent-3);
+  backdrop-filter: blur(calc(var(--blur-24, 24px) / 2));
+  padding: 20px 20px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  flex-direction: column;
 }
-@media only screen and (max-width: 1280px) {
+/* @media only screen and (max-width: 1280px) {
   .wrapper {
     padding: 70px 0px;
   }
@@ -19,4 +20,4 @@
   .wrapper {
     padding: 24px 0;
   }
-}
+} */

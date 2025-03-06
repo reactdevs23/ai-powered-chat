@@ -59,4 +59,6 @@
 .button {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  padding: 12px 10px;
+  font-size: 14px;
 }

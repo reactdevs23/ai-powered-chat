@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import classes from "./Profile.module.css";
 import { Button, Input, Text } from "components/common";
 import { IoMdMore } from "react-icons/io";
@@ -51,6 +51,7 @@ const allAccounts = [
 ];
 
 const Profile = () => {
+  const fileInputRef = useRef(null);
   // for user img handling
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -83,7 +84,9 @@ const Profile = () => {
   };
 
   const handleClick = () => {
-    document.getElementById("imageUploadInput").click();
+    if (fileInputRef.current) {
+      fileInputRef.current.click();
+    }
   };
 
   const handleCloseClick = (e) => {
@@ -169,6 +172,7 @@ const Profile = () => {
         </div>
         {/* Hidden input for image upload */}
         <input
+          ref={fileInputRef}
           type="file"
           id="imageUploadInput"
           accept="image/jpeg, image/png"
@@ -194,7 +198,7 @@ const Profile = () => {
               className={classes.input}
             />
           ) : (
-            <Text semiBold primitive700 base textRight>
+            <Text semiBold primitive0 sm textRight>
               {name ? name : "_"}
             </Text>
           )}
@@ -246,7 +250,7 @@ const Profile = () => {
               className={classes.input}
             />
           ) : (
-            <Text semiBold primitive700 base textRight>
+            <Text semiBold primitive0 sm textRight>
               {email ? email : "_"}
             </Text>
           )}
@@ -279,10 +283,13 @@ const Profile = () => {
             >
               <Button
                 transparent
-                className={classes.editButton}
+                className={clsx(
+                  classes.moreButton,
+                  showEmailModifyDropdown && classes.active
+                )}
                 onClick={() => setShowEmailModifyDropdown((prev) => !prev)}
               >
-                <IoMdMore className={classes.editIcon} />
+                <IoMdMore className={clsx(classes.moreIcon)} />
               </Button>
             </Dropdown>
           )}

@@ -1,0 +1,22 @@
+.wrapper {
+  background: url(../../images/claimAirdrop/art.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  margin-left: 240px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 90%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+@media only screen and (max-width: 1199px) {
+  .wrapper {
+    margin: 0;
+  }
+}

@@ -3,17 +3,17 @@
   align-items: center;
   padding: 1px;
 
-  height: 12px;
+  height: 8px;
   width: 100%;
-  border-radius: 2px;
-  background: var(--Primitive-900);
+  border-radius: 6px;
+  background: var(--Primitive-950);
 
   transition: background-color 0.5s ease-out;
 }
 
 .progress {
   height: 100%;
-  background: var(--Primary-Default);
+  background: var(--Primitive-Default);
   height: 100%;
   transition: width 0.5s ease-out;
   border-radius: 2px;

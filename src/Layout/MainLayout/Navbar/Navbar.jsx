@@ -3,7 +3,7 @@ import { IoMdClose } from "react-icons/io";
 import { AiOutlineAlignRight } from "react-icons/ai";
 import classes from "./Navbar.module.css";
 
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import Dropdown from "./Dropdown/Dropdown";
 import clsx from "clsx";
@@ -11,6 +11,7 @@ import { logo } from "images";
 import { Button } from "components/common";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const charecterRef = useRef(null);
   const resourcesRef = useRef(null);
   const [isCharectersDropdownActive, setIsCharecterDropdownActive] =
@@ -137,10 +138,20 @@ const Navbar = () => {
           </NavLink>{" "}
           <div className={classes.buttonContainer}>
             {" "}
-            <Button transparent onClick={() => {}}>
+            <Button
+              transparent
+              onClick={() => {
+                navigate("/claim-airdrop");
+              }}
+            >
               Claim Airdrop
             </Button>
-            <Button btnPrimary onClick={() => {}}>
+            <Button
+              btnPrimary
+              onClick={() => {
+                navigate("/login");
+              }}
+            >
               Try It Now
             </Button>
           </div>

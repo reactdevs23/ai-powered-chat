@@ -1,0 +1,16 @@
+.label {
+  padding-bottom: 6px;
+}
+
+.symbol {
+  font-size: 14px;
+  color: var(--Primitive-200);
+  font-weight: 400;
+}
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}

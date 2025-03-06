@@ -1,0 +1,14 @@
+.wrapper {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.info {
+  border-bottom: 2px solid var(--Primary-transparent-8);
+  padding: 16px 0;
+}
+.info:last-child {
+  border: none;
+}

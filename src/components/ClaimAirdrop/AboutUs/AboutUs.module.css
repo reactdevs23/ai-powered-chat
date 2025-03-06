@@ -1,0 +1,20 @@
+.wrapper {
+  gap: 24px;
+}
+.socialContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.icon {
+  font-size: 20px;
+  color: var(--Primitive-Default);
+}
+.infoContainer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}

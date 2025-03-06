@@ -42,6 +42,7 @@ const Input = ({
         sm && classes.sm
       )}
     >
+      {search && !noIcon && <CiSearch className={classes.searchIcon} />}
       {textarea ? (
         <textarea
           name={name}
@@ -84,7 +85,6 @@ const Input = ({
         </>
       )}
 
-      {search && !noIcon && <CiSearch className={classes.searchIcon} />}
       {search && value && (
         <MdClose className={classes.close} onClick={() => setValue("")} />
       )}

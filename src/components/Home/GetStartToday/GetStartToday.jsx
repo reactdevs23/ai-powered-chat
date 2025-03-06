@@ -2,8 +2,10 @@ import { Button, Heading, Text } from "components/common";
 import classes from "./GetStartToday.module.css";
 import clsx from "clsx";
 import { checkMarkIcon } from "images";
+import { useNavigate } from "react-router-dom";
 
 const GetStartToday = () => {
+  const navigate = useNavigate();
   const list = [
     "Boost engagement, automate tasks, and enhance experiences!",
     "Join now and unlock the future of AI chat!",
@@ -20,10 +22,22 @@ const GetStartToday = () => {
             Start chatting today and experience the future of AI conversations!{" "}
           </Text>
           <div className={classes.buttonContainer}>
-            <Button btnPrimary onClick={() => {}} className={classes.button}>
+            <Button
+              btnPrimary
+              onClick={() => {
+                navigate("/login");
+              }}
+              className={classes.button}
+            >
               Try It Now
             </Button>{" "}
-            <Button transparent onClick={() => {}} className={classes.button}>
+            <Button
+              transparent
+              onClick={() => {
+                navigate("/claim-airdrop");
+              }}
+              className={classes.button}
+            >
               Claim Airdrop
             </Button>
           </div>

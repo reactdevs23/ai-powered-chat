@@ -6,6 +6,7 @@ import { IoClose } from "react-icons/io5";
 import { useState } from "react";
 import Dropdown from "pages/ManageAccount/Dropdown/Dropdown";
 import WarningModal from "Modals/WarningModal/WarningModal";
+import clsx from "clsx";
 
 const ConnectedAccount = ({
   logo,
@@ -42,10 +43,10 @@ const ConnectedAccount = ({
         >
           <Button
             transparent
-            className={classes.moreButton}
+            className={clsx(classes.moreButton, showDropdown && classes.active)}
             onClick={() => setShowDropdown((prev) => !prev)}
           >
-            <IoMdMore className={classes.moreIcon} />
+            <IoMdMore className={clsx(classes.moreIcon)} />
           </Button>
         </Dropdown>
       </div>

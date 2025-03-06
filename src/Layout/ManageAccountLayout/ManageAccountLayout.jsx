@@ -3,7 +3,7 @@ import classes from "./ManageAccountLayout.module.css";
 import { useState } from "react";
 import { PiSidebar } from "react-icons/pi";
 
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import clsx from "clsx";
 import { devider, devider2 } from "images";
 import { Heading } from "components/common";
@@ -30,12 +30,15 @@ const navItems = [
 ];
 
 const ManageAccountLayout = () => {
+  const navigate = useNavigate();
   const [isSidebarActive, setIsSidebarActive] = useState(false);
   return (
     <Modal
       className={classes.modal}
       isActive={true}
-      onClose={() => {}}
+      onClose={() => {
+        navigate("/");
+      }}
       noHeading
     >
       <div className={clsx(classes.header)}>
@@ -58,10 +61,7 @@ const ManageAccountLayout = () => {
         <Heading primitive50 medium lg>
           Manage Account
         </Heading>
-        <button
-          className={classes.closeButton}
-          // onClick={() => setIsModalActive(false)}
-        >
+        <button className={classes.closeButton} onClick={() => navigate("/")}>
           <IoClose className={classes.closeIcon} />
         </button>
         <img src={devider} alt="#" className={classes.devider2} />

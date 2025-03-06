@@ -1,0 +1,42 @@
+.wrapper {
+  padding: 0;
+}
+.header {
+  padding: 20px;
+
+  border-bottom: 1px solid var(--Primary-transparent-8);
+  position: relative;
+}
+.devider {
+  width: calc(100% + 40px);
+}
+.spaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  border-bottom: 1px solid var(--Primary-transparent-8);
+}
+.stakeContainer {
+  border: none;
+}
+.symbol {
+  font-size: 14px;
+  color: var(--Primitive-200);
+  font-weight: 400;
+}
+.label {
+  padding-bottom: 3px;
+}
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.apr {
+  color: var(--Warning-Default);
+  border-radius: 4px;
+  background: var(--Warning-transparent-8);
+  padding: 2px 6px;
+}

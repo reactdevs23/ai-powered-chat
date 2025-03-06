@@ -27,7 +27,7 @@
   position: absolute;
   right: 0;
   left: 0;
-  transform: translateX(-100%);
+  transform: translateX(calc(-100% + 10px));
   top: calc(100% + 8px);
   z-index: 100;
   opacity: 0;

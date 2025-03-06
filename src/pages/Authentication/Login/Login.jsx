@@ -3,16 +3,20 @@ import React, { useState } from "react";
 
 import { Button, Input, Text } from "components/common";
 
-import clsx from "clsx";
 import LoginOrSignupWith from "../LoginOrSignupWith/LoginOrSignupWith";
 import AuthenticationModal from "components/common/AuthenticationModal/AuthenticationModal";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
 
   const [password, setPassword] = useState("");
   return (
-    <AuthenticationModal heading="Login to [Platform Name]">
+    <AuthenticationModal
+      heading="Login to [Platform Name]"
+      onClose={() => navigate("/")}
+    >
       <div className={classes.formContainer}>
         <LoginOrSignupWith />
         <Text primitive500 sm className={classes.or} textCenter>

@@ -12,6 +12,10 @@ import ManageAccountLayout from "Layout/ManageAccountLayout/ManageAccountLayout"
 import Profile from "pages/ManageAccount/Profile/Profile";
 import Security from "pages/ManageAccount/Security/Security";
 import Subscription from "pages/ManageAccount/Subscription/Subscription";
+import ChatData from "./pages/ManageAccount/ChatData/ChatData";
+import ClaimAirdrop from "pages/ClaimAirdrop/ClaimAirdrop";
+import AirdropAndStakinLayout from "Layout/AirdropAndStakinLayout/AirdropAndStakinLayout";
+import Staking from "pages/Staking/Staking";
 
 function App() {
   useEffect(() => {
@@ -47,11 +51,17 @@ function App() {
         <Route path="" element={<Home />}></Route>
       </Route>
       {/* End Landing */}
+      {/*Start Airdrop and staking  */}
+      <Route path="/" element={<AirdropAndStakinLayout />}>
+        <Route path="claim-airdrop" element={<ClaimAirdrop />} />
+        <Route path="stacking" element={<Staking />} />
+      </Route>
+      {/*End */}
       <Route path="manage-account/" element={<ManageAccountLayout />}>
         <Route path="profile" element={<Profile />} />
         <Route path="security" element={<Security />} />
         <Route path="subscription" element={<Subscription />} />
-        <Route path="chat-data" element={<Profile />} />
+        <Route path="chat-data" element={<ChatData />} />
       </Route>
     </Routes>
   );

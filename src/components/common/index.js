@@ -11,6 +11,7 @@ import Tabs from "./Tabs/Tabs";
 import CheckBox from "./CheckBox/CheckBox";
 import ProgressBar from "./ProgressBar/ProgressBar";
 import TextArea from "./TextArea/TextArea";
+import Dropdown from "./Dropdown/Dropdown";
 
 export {
   Wrapper,
@@ -25,4 +26,5 @@ export {
   CheckBox,
   ProgressBar,
   TextArea,
+  Dropdown,
 };

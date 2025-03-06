@@ -75,20 +75,23 @@
 }
 .wrapper .editButton,
 .wrapper .editedButton,
-.wrapper .closeButton {
+.wrapper .closeButton,
+.wrapper .moreButton {
   padding: 0px;
 }
 
 .editButton:hover,
 .editedButton:hover,
-.closeButton:hover {
+.closeButton:hover,
+.moreButton:hover {
   background: transparent;
   opacity: 1;
   transform: translateY(0);
 }
 .editIcon,
 .checkedIcon,
-.closeIcon {
+.closeIcon,
+.moreIcon {
   font-size: 18px;
   color: var(--Primitive-500);
 }
@@ -98,6 +101,16 @@
 .editButton:hover .editIcon,
 .closeButton:hover .closeIcon:hover {
   color: var(--Primitive-0);
+}
+.moreButton {
+  border-radius: 4px;
+}
+.moreButton.active,
+.moreButton:hover {
+  background: transparent;
+  opacity: 1;
+  transform: translateY(0);
+  background: var(--Primitive-950);
 }
 .input {
   padding: 8px 14px;
@@ -128,4 +141,6 @@
 }
 .addButton {
   margin-top: 6px;
+  padding: 12px 8px;
+  font-size: 14px;
 }

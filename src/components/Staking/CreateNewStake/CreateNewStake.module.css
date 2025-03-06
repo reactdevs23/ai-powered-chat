@@ -1,0 +1,72 @@
+.wrapper {
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--Primary-transparent-8);
+  position: relative;
+}
+.selectBox {
+  padding: 18px 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-bottom: 1px solid var(--Primary-transparent-8);
+}
+.durationContainer {
+  flex-direction: row;
+  justify-content: space-between;
+}
+.inputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+.inputContainer .input {
+  background: transparent;
+  border: none;
+  padding: 0px 0;
+  box-shadow: none;
+}
+.inputContainer .input input {
+  font-size: 24px;
+}
+.symbol {
+  color: var(--Primary-transparent-48);
+}
+.stakeButton {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 14px;
+}
+.infoWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+}
+.spaceBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.value {
+  margin-left: auto;
+}
+@media only screen and (max-width: 520px) {
+  .inputContainer .input input {
+    font-size: 20px;
+  }
+}

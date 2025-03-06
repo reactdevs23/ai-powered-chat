@@ -19,11 +19,15 @@
 .connectedAccount .moreButton {
   padding: 0px;
 }
-
+.moreButton {
+  border-radius: 4px;
+}
+.moreButton.active,
 .moreButton:hover {
   background: transparent;
   opacity: 1;
   transform: translateY(0);
+  background: var(--Primitive-950);
 }
 .moreIcon {
   font-size: 18px;

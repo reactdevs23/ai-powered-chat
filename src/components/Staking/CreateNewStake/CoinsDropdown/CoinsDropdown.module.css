@@ -1,0 +1,115 @@
+.dropdown {
+  position: relative;
+}
+.wFull {
+  width: 100%;
+}
+.labelContainer {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto auto;
+  gap: 6px;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 6px;
+
+  background: transparent;
+  padding: 8px 0px;
+}
+
+.arrow {
+  font-size: 14px;
+  color: var(--Primary-transparent-32);
+  cursor: pointer;
+  margin-left: auto;
+}
+.arrowUp {
+  color: var(--Primitive-200);
+}
+.arrow.active {
+  color: var(--Primitive-Default);
+}
+.dropdownMain {
+  min-width: 100%;
+  width: max-content;
+  position: absolute;
+  right: 0;
+  left: 0;
+
+  top: calc(100% + 8px);
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s ease;
+
+  border-radius: 12px;
+
+  border-radius: 8px;
+  background: var(--Primitive-900);
+  border: 1px solid var(--Primitive-800);
+  box-shadow: var(--depth-0, 0px) var(--depth-12, 12px) var(--blur-24, 24px)
+      var(--depth--4, -4px) var(--color-black-32, rgba(0, 0, 0, 0.32)),
+    var(--depth-0, 0px) var(--depth-6, 6px) var(--blur-16, 16px)
+      var(--depth--6, -6px) var(--color-black-48, rgba(0, 0, 0, 0.48));
+}
+.v2 .dropdownMain {
+  left: 50%;
+  top: 0px;
+  transform: translate(-50%, -100%);
+  width: max-content;
+}
+.list {
+  height: 0;
+  overflow: hidden;
+}
+
+.dropdownMain.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.active .list {
+  overflow: auto;
+  max-height: 250px;
+  height: 100%;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: 0.4s ease;
+  color: var(--Primitive-200);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.listItem.active {
+  background: var(--Primitive-0);
+}
+.logo {
+  max-width: 20px;
+  width: 100%;
+}
+.amount {
+  margin-left: auto;
+}
+/* .listItem.active {
+  color: var(--Heading-Primary);
+} */
+.listItem:hover {
+  background: var(--Primary-transparent-3);
+  color: var(--Primitive-0);
+}
+.listItem.active {
+  border-radius: 6px;
+  background: var(--Primary-transparent-3);
+}
+.above {
+  bottom: 100%;
+  top: auto;
+}

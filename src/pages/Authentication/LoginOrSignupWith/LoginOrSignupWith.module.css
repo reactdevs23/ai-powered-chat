@@ -14,7 +14,7 @@
   width: 100%;
   padding: 10px 12px;
   border-radius: var(--radius-8, 8px);
-  background: var(--Primary-Transparent-3);
+  background: var(--Primary-transparent-3);
   transition: 0.3s;
 }
 .iconContainer:hover {
