@@ -19,7 +19,7 @@ import {
   userImg,
   userImgPlaceholder,
 } from "images";
-
+import { IoMdMore } from "react-icons/io";
 import classes from "./Sidebar.module.css";
 import { Link, NavLink } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
@@ -56,15 +56,34 @@ const Sidebar = ({ sidebar, setSidebar }) => {
   const [searchValue, setSearchValue] = useState();
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 1280);
   const regularChats = [
-    "Restaurant Website Header Design",
-    "Project Management Tool Sitemap",
-    "General Settings Overview",
+    { id: 1, chat: "Restaurant Website Header Design" },
+    { id: 2, chat: "Project Management Tool Sitemap" },
+    { id: 3, chat: "General Settings Overview" },
+    { id: 4, chat: "Restaurant Website Header Design" },
+    { id: 5, chat: "Project Management Tool Sitemap" },
+    { id: 6, chat: "General Settings Overview" },
   ];
   const [activeChat, setActiveChat] = useState("");
   const handleActiveChat = (chat) => {
     setActiveChat(chat);
   };
   const aiCharacters = [
+    {
+      icon: erpIcon,
+      character: "Best Languages for ERP",
+    },
+    {
+      icon: faqIcon,
+      character: "FAQ & Knowledge Base",
+    },
+    {
+      icon: reportIcon,
+      character: "Team Productivity Reports",
+    },
+    {
+      icon: loadManagementIcon,
+      character: "Lead Management & Follow-ups",
+    },
     {
       icon: erpIcon,
       character: "Best Languages for ERP",
@@ -105,11 +124,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
   return (
     <section
       ref={ref}
-      className={clsx(
-        classes.sidebar,
-        sidebar ? classes.showSidebar : "",
-        "overflow"
-      )}
+      className={clsx(classes.sidebar, sidebar ? classes.showSidebar : "")}
     >
       <div className={classes.navItemsContainer}>
         <div className={classes.header}>
@@ -165,9 +180,9 @@ const Sidebar = ({ sidebar, setSidebar }) => {
           </Text>
 
           <div className={classes.chats}>
-            {regularChats?.map((chat, i) => (
+            {regularChats?.map(({ id, chat }) => (
               <div
-                key={i}
+                key={id}
                 className={clsx(
                   activeChat === chat && classes.activeChatContainer,
                   classes.chatContainer

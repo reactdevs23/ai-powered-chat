@@ -3,7 +3,7 @@ import classes from "./ChatScreenLayout.jsx.module.css";
 import clsx from "clsx";
 import RightSidebar from "./RightSidebar/RightSidebar";
 import Navbar from "./Navbar/Navbar";
-import Sidebar from "Layout/AirdropAndStakinLayout/Sidebar/Sidebar";
+import Sidebar from "Layout/Sidebar/Sidebar";
 import { useState } from "react";
 const ChatScreenLayout = () => {
   const [sidebar, setSidebar] = useState(true);

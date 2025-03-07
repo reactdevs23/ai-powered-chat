@@ -3,7 +3,7 @@ import Navbar from "./Navbar/Navbar";
 import classses from "./AirdropAndStakinLayout.module.css";
 import ConnectWalletModal from "Modals/ConnectWalletModal/ConnectWalletModal";
 import { useAppContext } from "ContextProvider/ContextProvider";
-import Sidebar from "./Sidebar/Sidebar";
+import Sidebar from "../Sidebar/Sidebar";
 import { useState } from "react";
 import clsx from "clsx";
 

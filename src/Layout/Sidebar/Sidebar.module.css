@@ -3,6 +3,7 @@
   top: 5px;
   left: 5px;
   height: 100vh;
+  overflow-y: auto;
   padding: 10px;
   background: var(--Primary-transparent-3);
   display: flex;
@@ -28,6 +29,12 @@
   flex-direction: column;
   gap: 10px;
   width: 100%;
+}
+.chatsAndCharacters {
+  max-height: 400px;
+  min-height: 400px;
+  overflow: hidden;
+  height: 100%;
 }
 .navItemsContainer {
   padding: 10px;
@@ -91,7 +98,7 @@
   flex-direction: column;
   gap: 4px;
   position: relative;
-  padding: 10px;
+  padding: 10px 0;
 }
 .deviderContainer {
   border-bottom: 1px solid var(--Primary-transparent-8);
@@ -103,10 +110,16 @@
 .aiCharacters {
   gap: 6px;
 }
+
 .chats,
 .characters {
   display: flex;
   flex-direction: column;
+  max-height: 140px;
+  min-height: 140px;
+
+  overflow-y: auto;
+  padding: 0 10px;
 }
 .chatContainer {
   padding: 8px;
@@ -114,6 +127,9 @@
 }
 .label {
   padding: 0 8px;
+}
+.chatsAndCharacters .label {
+  padding: 0 18px;
 }
 .chat {
   max-width: 220px;
@@ -150,13 +166,17 @@
 .activeCharacter .characterName {
   color: var(--Primitive-Default);
 }
+.userWrapper {
+  position: static;
+  bottom: 0;
+}
 
 .upgradePlan {
   display: flex;
   align-items: flex-start;
   gap: 12px;
 
-  background: url(../../../images/sidebar/upgradePlanArt.png);
+  background: url(../../images/sidebar/upgradePlanArt.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
