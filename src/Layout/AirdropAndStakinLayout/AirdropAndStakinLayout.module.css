@@ -4,7 +4,6 @@
   background-size: cover;
   background-position: center;
   min-height: 100vh;
-  margin-left: 240px;
 }
 .container {
   display: flex;
@@ -13,9 +12,4 @@
 
   margin: 0 auto;
   padding-top: 100px;
-}
-@media only screen and (max-width: 1199px) {
-  .wrapper {
-    margin: 0;
-  }
 }

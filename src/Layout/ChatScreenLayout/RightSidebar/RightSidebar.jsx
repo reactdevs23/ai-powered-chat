@@ -22,12 +22,16 @@ const RightSidebar = ({ sidebar, setSidebar }) => {
     };
     window.addEventListener("resize", handleResize);
 
+    // Initialize the sidebar state if screen is small
+    if (isSmallScreen) {
+      setSidebar(false);
+    }
+
     // Cleanup event listener on unmount
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [isSmallScreen, setSidebar]);
 
   // Call the hook conditionally based on screen size
-
   useOnClickOutside(ref, () => {
     if (isSmallScreen) setSidebar(false);
   });

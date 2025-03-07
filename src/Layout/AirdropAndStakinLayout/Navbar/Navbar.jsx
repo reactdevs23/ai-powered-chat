@@ -33,7 +33,7 @@ const Navbar = ({ setSidebar }) => {
   useOnClickOutside(ref, () => setShowDropdown(false));
   return (
     <div className={clsx(classes.wrapper, isScrolled && classes.wrapperBg)}>
-      <nav className={classes.nav}>
+      <nav className={clsx(classes.nav, "container2")}>
         <button
           className={classes.sidebarButton}
           onClick={() => setSidebar((prev) => !prev)}

@@ -33,12 +33,12 @@ const navItems = [
   {
     icons: [newChatIcon, newChatActiveIcon],
     navItem: "New Chat",
-    to: "/new-chat",
+    to: "/chat-screen",
   },
   {
     icons: [aiCharectersIcon, aiCharectersActiveIcon],
     navItem: "AI Characters",
-    to: "/ai-charecters",
+    to: "/ai-characters",
   },
   {
     icons: [claimAirdropIcon, claimAirdropActiveIcon],
