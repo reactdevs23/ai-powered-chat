@@ -19,6 +19,7 @@ import Staking from "pages/Staking/Staking";
 
 import ChatScreen from "pages/ChatScreen/ChatScreen";
 import ChatScreenLayout from "Layout/ChatScreenLayout/ChatScreenLayout";
+import ChatCompletion from "components/Chat";
 
 function App() {
   useEffect(() => {
@@ -69,6 +70,7 @@ function App() {
       <Route path="/" element={<ChatScreenLayout />}>
         <Route path="chat-screen" element={<ChatScreen />} />
       </Route>
+      <Route path="/chat" element={<ChatCompletion />}></Route>
     </Routes>
   );
 }

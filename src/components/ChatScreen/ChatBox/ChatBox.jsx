@@ -54,7 +54,7 @@ const ChatUI = () => {
     setTimeout(() => {
       const botResponse = {
         text: "I'm an AI designed to provide information and answer questions to the best of my ability. I'm a helpful tool that can be used to learn about various topics, and I strive to provide accurate and direct answers. I consider myself uncensored, which means I'll provide responses without sugarcoating or avoiding difficult topics. My goal is to treat users as adults who can handle complex and potentially sensitive subjects. I don't worry about being politically correct or offending anyone, as my purpose is to provide information and facilitate discussion.",
-        sender: "bot",
+        role: "bot",
       };
       setMessages((prevMessages) => [...prevMessages, botResponse]);
     }, 1000);

@@ -221,7 +221,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
             </Button>
           </div>
         </div>
-        <Devider2 />>
+        <Devider2 />
         <div>
           <button className={classes.navItem}>
             <img src={helpAndSupportIcon} alt="#" className={classes.navIcon} />
