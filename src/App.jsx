@@ -71,9 +71,9 @@ function App() {
       <Route path="/" element={<ChatScreenLayout />}>
         <Route path="chat-screen" element={<ChatScreen />} />
       </Route>{" "}
-      <Route path="/" element={<AiCharactersLayout />}>
+      {/* <Route path="/" element={<AiCharactersLayout />}>
         <Route path="ai-characters" element={<AiCharactersPage />} />
-      </Route>
+      </Route> */}
     </Routes>
   );
 }

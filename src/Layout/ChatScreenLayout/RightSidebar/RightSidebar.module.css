@@ -107,5 +107,8 @@
 .sidebarButton {
   display: block;
 }
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 1280px) {
+  .sidebar {
+    background: var(--Primitive-900);
+  }
 }

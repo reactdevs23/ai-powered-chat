@@ -4,16 +4,37 @@ import clsx from "clsx";
 import { Button, Tabs } from "components/common";
 import Devider2 from "components/common/Devider2/Devider";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { MdClose } from "react-icons/md";
 import ChatSettings from "./ChatSetting";
 import AppSettings from "./AppSettings";
+import useOnClickOutside from "hooks";
 
 const RightSidebar = ({ sidebar, setSidebar }) => {
   const [activeTab, setActiveTab] = useState("Chat");
+  const ref = useRef(null);
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 1280);
+
+  // Handle screen resize to update `isSmallScreen`
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 1280);
+    };
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Call the hook conditionally based on screen size
+
+  useOnClickOutside(ref, () => {
+    if (isSmallScreen) setSidebar(false);
+  });
 
   return (
     <section
+      ref={ref}
       className={clsx(
         classes.sidebar,
         sidebar ? classes.showSidebar : classes.hideSidebar,

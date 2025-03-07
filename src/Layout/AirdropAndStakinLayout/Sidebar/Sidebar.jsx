@@ -22,12 +22,13 @@ import {
 
 import classes from "./Sidebar.module.css";
 import { Link, NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button, Heading, Input, Text } from "components/common";
 
 import clsx from "clsx";
 import { MdClose } from "react-icons/md";
 import Devider2 from "components/common/Devider2/Devider";
+import useOnClickOutside from "hooks";
 const navItems = [
   {
     icons: [newChatIcon, newChatActiveIcon],
@@ -51,8 +52,9 @@ const navItems = [
   },
 ];
 const Sidebar = ({ sidebar, setSidebar }) => {
+  const ref = useRef();
   const [searchValue, setSearchValue] = useState();
-
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 1280);
   const regularChats = [
     "Restaurant Website Header Design",
     "Project Management Tool Sitemap",
@@ -84,9 +86,25 @@ const Sidebar = ({ sidebar, setSidebar }) => {
   const handleActiveCharacter = (character) => {
     setActiveCharacter(character);
   };
+  // Handle screen resize to update `isSmallScreen`
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 1280);
+    };
+    window.addEventListener("resize", handleResize);
 
+    // Cleanup event listener on unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Call the hook conditionally based on screen size
+
+  useOnClickOutside(ref, () => {
+    if (isSmallScreen) setSidebar(false);
+  });
   return (
     <section
+      ref={ref}
       className={clsx(
         classes.sidebar,
         sidebar ? classes.showSidebar : "",
