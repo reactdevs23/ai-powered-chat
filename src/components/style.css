@@ -1,0 +1,128 @@
+/* style.css */
+
+/* Container for the markdown content */
+.markdown-container {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Styling for paragraphs */
+.markdown-container p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+/* Header Styling */
+.markdown-container h1,
+.markdown-container h2,
+.markdown-container h3,
+.markdown-container h4,
+.markdown-container h5,
+.markdown-container h6 {
+  color: #2c3e50;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Define different header levels */
+.markdown-container h1 {
+  font-size: 36px;
+}
+
+.markdown-container h2 {
+  font-size: 30px;
+}
+
+.markdown-container h3 {
+  font-size: 24px;
+}
+
+.markdown-container h4 {
+  font-size: 20px;
+}
+
+.markdown-container h5 {
+  font-size: 18px;
+}
+
+.markdown-container h6 {
+  font-size: 16px;
+}
+
+/* Code block Styling */
+.markdown-container pre {
+  background-color: #2e3440;
+  color: #d8dee9;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  overflow-x: auto;
+  margin: 15px 0;
+}
+
+/* Inline code styling */
+.markdown-container code {
+  background-color: #f8f8f8;
+  padding: 3px 5px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Links Styling */
+.markdown-container a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.markdown-container a:hover {
+  text-decoration: underline;
+}
+
+/* Blockquote styling */
+.markdown-container blockquote {
+  border-left: 4px solid #ccc;
+  padding-left: 20px;
+  color: #555;
+  font-style: italic;
+  margin: 20px 0;
+}
+
+/* Lists Styling */
+.markdown-container ul,
+.markdown-container ol {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.markdown-container li {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Styling for loading state */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #3498db;
+  animation: loadingAnimation 1.5s infinite ease-in-out;
+}
+
+@keyframes loadingAnimation {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
