@@ -14,7 +14,7 @@
   border-radius: 6px;
   border: 1px solid var(--Primary-transparent-6);
   background: var(--Primary-transparent-3);
-  padding: 4px 12px;
+  padding: 6px 12px;
 }
 .transparent {
   border: none;
@@ -40,7 +40,7 @@
   width: max-content;
   position: absolute;
   right: 0;
-  left: 0;
+  left: auto;
 
   top: calc(100% + 8px);
   z-index: 100;
@@ -83,6 +83,7 @@
 
 .listItem {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 8px;
   height: 40px;
@@ -109,8 +110,9 @@
   color: var(--Primitive-0);
 }
 .listItem.active {
+  color: var(--Primitive-Default);
   border-radius: 6px;
-  background: var(--Primary-transparent-3);
+  background: var(--Primitive-transparent-8);
 }
 .above {
   bottom: 100%;

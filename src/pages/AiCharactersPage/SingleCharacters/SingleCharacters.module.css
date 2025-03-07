@@ -1,0 +1,56 @@
+.wrapper {
+  padding: 20px;
+  border-radius: 12px;
+  background: var(--Primary-transparent-3);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+.pro {
+  border-radius: 0px 0px 0px var(--radius-12, 12px);
+  background: var(--Primitive-transparent-8);
+  padding: 8px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+.proImg {
+  max-width: 14px;
+  width: 100%;
+}
+.img {
+  max-width: 68px;
+  aspect-ratio: 1/1;
+  width: 100%;
+  display: block;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.ratingAndComment {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 2px;
+}
+.rating,
+.numberOfComment {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+}
+.star {
+  color: var(--Primitive-Default);
+  font-size: 14px;
+}
+.chatIcon {
+  max-width: 14px;
+  width: 100%;
+}

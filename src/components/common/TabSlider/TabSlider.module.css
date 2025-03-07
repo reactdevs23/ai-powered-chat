@@ -1,0 +1,73 @@
+.tabContainer {
+  display: flex;
+
+  width: 100%;
+
+  overflow: hidden;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.tabContainer::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+.tabs {
+  display: flex;
+  width: max-content;
+  margin: 0 auto;
+  align-items: center;
+
+  padding: 2px;
+  border-radius: var(--radius-8, 8px);
+  border: 1px solid var(--Primary-transparent-6);
+  background: var(--Primitive-900);
+}
+.buySell {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--Primitive-950);
+  border: 1px soilid var(--Primitive-950);
+}
+.tab {
+  color: var(--Primitive-400);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  border-radius: 6px;
+
+  box-shadow: 1px 1px 2px 0px rgba(14, 15, 57, 0.04);
+  padding: 8px 20px;
+  background: transparent;
+  cursor: pointer;
+}
+.sm .tab {
+  font-size: 14px;
+  padding: 6px 15px;
+}
+.tab:hover {
+  transform: translate(0);
+}
+.tab:active {
+  transform: translate(0);
+}
+
+.activeTab {
+  background: var(--Primitive-Default);
+  color: var(--Primitive-950);
+}
+.activeSell.activeTab {
+  background: rgba(220, 73, 73, 0.08);
+  color: var(--Primitive-Error);
+}
+@media only screen and (max-width: 520px) {
+  .type2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .type2 .tab {
+    padding: 6px;
+  }
+  .type2 .tab:last-child {
+    grid-column: 1/-1;
+  }
+}

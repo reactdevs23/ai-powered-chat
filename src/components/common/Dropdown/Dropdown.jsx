@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import clsx from "clsx";
-import { FaAngleDown, FaAngleUp } from "react-icons/fa";
+import { FaAngleDown, FaAngleUp, FaCheck } from "react-icons/fa";
 
 import { Text } from "components/common";
 import useOnClickOutside from "hooks";
@@ -57,6 +57,9 @@ const Dropdown = ({
               }}
             >
               <Text medium>{item}</Text>
+              {selectedValue === item && (
+                <FaCheck className={classes.checkIcon} />
+              )}
             </div>
           ))}
         </div>

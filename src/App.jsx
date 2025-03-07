@@ -19,7 +19,8 @@ import Staking from "pages/Staking/Staking";
 
 import ChatScreen from "pages/ChatScreen/ChatScreen";
 import ChatScreenLayout from "Layout/ChatScreenLayout/ChatScreenLayout";
-import ChatCompletion from "components/Chat";
+import AiCharactersLayout from "Layout/AiCharactersLayout/AiCharactersLayout";
+import AiCharactersPage from "pages/AiCharactersPage/AiCharactersPage";
 
 function App() {
   useEffect(() => {
@@ -69,8 +70,10 @@ function App() {
       </Route>
       <Route path="/" element={<ChatScreenLayout />}>
         <Route path="chat-screen" element={<ChatScreen />} />
+      </Route>{" "}
+      <Route path="/" element={<AiCharactersLayout />}>
+        <Route path="ai-characters" element={<AiCharactersPage />} />
       </Route>
-      <Route path="/chat" element={<ChatCompletion />}></Route>
     </Routes>
   );
 }

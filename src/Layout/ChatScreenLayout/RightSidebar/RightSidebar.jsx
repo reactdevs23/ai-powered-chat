@@ -16,7 +16,7 @@ const RightSidebar = ({ sidebar, setSidebar }) => {
     <section
       className={clsx(
         classes.sidebar,
-        sidebar ? classes.showSidebar : "",
+        sidebar ? classes.showSidebar : classes.hideSidebar,
         "overflow"
       )}
     >

@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  max-width: 736px;
+  width: 100%;
 }
 .botMessage {
   align-self: flex-start;
@@ -22,6 +24,7 @@
 }
 .info {
   font-size: 13px;
+  margin-top: 2px;
 }
 .buttonContainer {
   display: flex;
@@ -58,9 +61,10 @@
 
 /* Styling for paragraphs */
 .markdownContainer p {
-  font-size: 16px;
+  font-size: 14px;
   color: var(--Primitive-0);
   margin-bottom: 12px;
+  line-height: 140%;
 }
 
 /* Header Styling */

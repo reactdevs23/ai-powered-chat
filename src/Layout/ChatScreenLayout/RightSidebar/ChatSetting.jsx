@@ -6,7 +6,7 @@ import Switch from "components/common/Switch/Switch";
 
 import { useState } from "react";
 
-const aiModels = ["GPT-4o", "GPT-50"];
+const aiModels = ["GPT-4o", "Llama 3.2 3B", "DeepSeek R1671B", "Dolphin 72B"];
 const tones = ["Professional", "Professional2"];
 const formalityLevels = ["Casual", "Formal"];
 const responseLength = ["Low", "Medium", "High"];
