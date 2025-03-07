@@ -124,6 +124,23 @@
 .chatContainer {
   padding: 8px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.moreButton {
+  color: var(--Primary-transparent-40);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  cursor: pointer;
+}
+.character:hover,
+.moreButton,
+.chatContainer:hover .moreButton {
+  display: flex;
 }
 .label {
   padding: 0 8px;
@@ -140,13 +157,16 @@
 .character {
   padding: 8px;
 
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr 16px;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   cursor: pointer;
 }
 .activeCharacter,
-.activeChatContainer {
+.activeChatContainer,
+.chatContainer:hover,
+.character:hover {
   background: var(--Primitive-transparent-8);
   border-radius: 6px;
 }
@@ -163,7 +183,9 @@
   border-radius: 50%;
 }
 .activeChatContainer .chat,
-.activeCharacter .characterName {
+.activeCharacter .characterName,
+.chatContainer:hover .chat,
+.character:hover .characterName {
   color: var(--Primitive-Default);
 }
 .userWrapper {

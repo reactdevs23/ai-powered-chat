@@ -29,6 +29,9 @@ import clsx from "clsx";
 import { MdClose } from "react-icons/md";
 import Devider2 from "components/common/Devider2/Devider";
 import useOnClickOutside from "hooks";
+import Dropdown from "pages/ManageAccount/Dropdown/Dropdown";
+import SingleChat from "./SingleChat";
+import SingleCharacter from "./SingleCharacter";
 const navItems = [
   {
     icons: [newChatIcon, newChatActiveIcon],
@@ -63,48 +66,36 @@ const Sidebar = ({ sidebar, setSidebar }) => {
     { id: 5, chat: "Project Management Tool Sitemap" },
     { id: 6, chat: "General Settings Overview" },
   ];
-  const [activeChat, setActiveChat] = useState("");
-  const handleActiveChat = (chat) => {
-    setActiveChat(chat);
-  };
+
   const aiCharacters = [
     {
+      id: 1,
       icon: erpIcon,
       character: "Best Languages for ERP",
     },
-    {
-      icon: faqIcon,
-      character: "FAQ & Knowledge Base",
-    },
+    { id: 2, icon: faqIcon, character: "FAQ & Knowledge Base" },
     {
       icon: reportIcon,
       character: "Team Productivity Reports",
     },
     {
+      id: 3,
       icon: loadManagementIcon,
       character: "Lead Management & Follow-ups",
     },
-    {
-      icon: erpIcon,
-      character: "Best Languages for ERP",
-    },
+    { id: 4, icon: erpIcon, character: "Best Languages for ERP" },
     {
       icon: faqIcon,
       character: "FAQ & Knowledge Base",
     },
+    { id: 5, icon: reportIcon, character: "Team Productivity Reports" },
     {
-      icon: reportIcon,
-      character: "Team Productivity Reports",
-    },
-    {
+      id: 6,
       icon: loadManagementIcon,
       character: "Lead Management & Follow-ups",
     },
   ];
-  const [activeCharacter, setActiveCharacter] = useState("");
-  const handleActiveCharacter = (character) => {
-    setActiveCharacter(character);
-  };
+
   // Handle screen resize to update `isSmallScreen`
   useEffect(() => {
     const handleResize = () => {
@@ -180,23 +171,8 @@ const Sidebar = ({ sidebar, setSidebar }) => {
           </Text>
 
           <div className={classes.chats}>
-            {regularChats?.map(({ id, chat }) => (
-              <div
-                key={id}
-                className={clsx(
-                  activeChat === chat && classes.activeChatContainer,
-                  classes.chatContainer
-                )}
-              >
-                <Text
-                  primitive200
-                  sm
-                  className={clsx(classes.chat)}
-                  onClick={() => handleActiveChat(chat)}
-                >
-                  {chat}
-                </Text>
-              </div>
+            {regularChats?.map((el) => (
+              <SingleChat {...el} key={el.id} />
             ))}
           </div>
         </div>{" "}
@@ -207,24 +183,8 @@ const Sidebar = ({ sidebar, setSidebar }) => {
           </Text>
 
           <div className={classes.characters}>
-            {aiCharacters?.map(({ character, icon }, i) => (
-              <div
-                className={clsx(
-                  classes.character,
-                  activeCharacter === character && classes.activeCharacter
-                )}
-                key={i}
-                onClick={() => handleActiveCharacter(character)}
-              >
-                <img
-                  src={icon}
-                  alt="charecter"
-                  className={classes.characterIcon}
-                />{" "}
-                <Text primitive200 sm className={classes.characterName}>
-                  {character}
-                </Text>
-              </div>
+            {aiCharacters?.map((el) => (
+              <SingleCharacter {...el} key={el.id} />
             ))}
           </div>
         </div>{" "}
