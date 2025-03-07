@@ -14,6 +14,7 @@ import {
   techGuru,
 } from "images";
 import AutoSlider from "components/common/AutoSlider/AutoSlider";
+
 const aiCharacters = [
   {
     img: smartAdvisor,
@@ -36,6 +37,7 @@ const aiCharacters = [
     name: "Fitness Coach",
   },
 ];
+
 const ChatUI = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
@@ -45,19 +47,91 @@ const ChatUI = () => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-  const sendMessage = () => {
+  const sendMessage = async () => {
     if (input.trim() === "") return;
+
     const userMessage = { text: input, sender: "user" };
     setMessages((prevMessages) => [...prevMessages, userMessage]);
     setInput("");
 
-    setTimeout(() => {
-      const botResponse = {
-        text: "I'm an AI designed to provide information and answer questions to the best of my ability. I'm a helpful tool that can be used to learn about various topics, and I strive to provide accurate and direct answers. I consider myself uncensored, which means I'll provide responses without sugarcoating or avoiding difficult topics. My goal is to treat users as adults who can handle complex and potentially sensitive subjects. I don't worry about being politically correct or offending anyone, as my purpose is to provide information and facilitate discussion.",
-        role: "bot",
-      };
-      setMessages((prevMessages) => [...prevMessages, botResponse]);
-    }, 1000);
+    try {
+      const response = await fetch(
+        "https://zarp-574634440075.europe-west4.run.app/chat/completions",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            model: "dolphin-2.9.2-qwen2-72b",
+            messages: [
+              { role: "system", content: "You are a helpful assistant" },
+              { role: "user", content: input },
+            ],
+            stream: true,
+          }),
+        }
+      );
+
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+
+      let accumulatedText = "";
+
+      // Append an empty system message first and track its index
+      let systemMessageIndex = -1;
+      setMessages((prevMessages) => {
+        systemMessageIndex = prevMessages.length;
+        return [...prevMessages, { text: "", sender: "system", loading: true }];
+      });
+
+      while (true) {
+        const { value, done } = await reader.read();
+        if (done) break;
+
+        const chunk = decoder.decode(value, { stream: true });
+        const lines = chunk.split("\n");
+
+        for (const line of lines) {
+          if (line.startsWith("data: ")) {
+            try {
+              const json = JSON.parse(line.replace("data: ", ""));
+              const content = json.choices?.[0]?.delta?.content || "";
+
+              if (content) {
+                accumulatedText += content;
+
+                // Update only the latest system message
+                setMessages((prevMessages) => {
+                  const updatedMessages = [...prevMessages];
+                  if (systemMessageIndex !== -1) {
+                    updatedMessages[systemMessageIndex] = {
+                      text: accumulatedText,
+                      sender: "system",
+                      loading: true, // Keep loading while receiving the response
+                    };
+                  }
+                  return updatedMessages;
+                });
+              }
+            } catch (error) {
+              console.error("Error parsing JSON:", error);
+            }
+          }
+        }
+      }
+
+      // Remove loading once response is fully received
+      setMessages((prevMessages) => {
+        const updatedMessages = [...prevMessages];
+        if (systemMessageIndex !== -1) {
+          updatedMessages[systemMessageIndex].loading = false;
+        }
+        return updatedMessages;
+      });
+    } catch (error) {
+      console.error("Error fetching AI response:", error);
+    }
   };
 
   return (
@@ -72,7 +146,7 @@ const ChatUI = () => {
                 </Text>
               )}
 
-              {msg.sender === "bot" && <ResponseMessage msg={msg} />}
+              {msg.sender === "system" && <ResponseMessage msg={msg} />}
             </React.Fragment>
           ))}
           <div ref={chatEndRef} />
@@ -103,11 +177,11 @@ const ChatUI = () => {
         </div>
       </div>
       <div className={classes.aiChrecters}>
-        <AutoSlider items={aiCharacters} />{" "}
+        <AutoSlider items={aiCharacters} />
         <Button primary sm className={classes.seAllButton}>
           See All
         </Button>
-      </div>{" "}
+      </div>
     </div>
   );
 };

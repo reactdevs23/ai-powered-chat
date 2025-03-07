@@ -1,3 +1,8 @@
+import ReactMarkdown from "react-markdown";
+import gfm from "remark-gfm"; // For GitHub-flavored markdown
+import rehypeRaw from "rehype-raw"; // For raw HTML rendering
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { useState } from "react";
 import { Heading, Text } from "components/common";
 import { TfiReload } from "react-icons/tfi";
@@ -11,7 +16,7 @@ import classes from "./ResponseMessage.module.css";
 import clsx from "clsx";
 import { botLogo } from "images";
 
-const ResponseMessage = ({ msg }) => {
+const ResponseMessage = ({ msg, loading }) => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
@@ -36,9 +41,38 @@ const ResponseMessage = ({ msg }) => {
           </Text>
         </div>
       </div>
-      <Text base className={classes.botMessage}>
-        {msg.text}
-      </Text>
+      {/* {loading ? (
+        <div className={classes.loading}>
+          <span>Replying...</span>
+        </div>
+      ) : ( */}
+      <div className={classes.markdownContainer}>
+        <ReactMarkdown
+          children={msg.text}
+          remarkPlugins={[gfm]} // Adds GitHub-flavored markdown
+          rehypePlugins={[rehypeRaw]} // Parses raw HTML
+          components={{
+            code({ node, inline, className, children, ...props }) {
+              const match = /language-(\w+)/.exec(className || "");
+              return !inline && match ? (
+                <SyntaxHighlighter
+                  style={dracula}
+                  language={match[1]}
+                  PreTag="div"
+                  {...props}
+                >
+                  {String(children).replace(/\n$/, "")}
+                </SyntaxHighlighter>
+              ) : (
+                <code className={className} {...props}>
+                  {children}
+                </code>
+              );
+            },
+          }}
+        />
+      </div>
+      {/* )} */}
 
       <div className={classes.actionContainer}>
         <button className={classes.actionButton}>

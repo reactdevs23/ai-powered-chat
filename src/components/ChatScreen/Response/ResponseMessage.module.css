@@ -46,3 +46,123 @@
 .actionButton .checkMark {
   color: var(--Primitive-Default);
 }
+
+/* markdown */
+/* style.css */
+
+/* Container for the markdown content */
+.markdownContainer {
+  padding-top: 6px;
+  color: var(--Primary-transparent-80);
+}
+
+/* Styling for paragraphs */
+.markdownContainer p {
+  font-size: 16px;
+  color: var(--Primitive-0);
+  margin-bottom: 12px;
+}
+
+/* Header Styling */
+.markdownContainer h1,
+.markdownContainer h2,
+.markdownContainer h3,
+.markdownContainer h4,
+.markdownContainer h5,
+.markdownContainer h6 {
+  color: var(--Primitive-0);
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Define different header levels */
+.markdownContainer h1 {
+  font-size: 36px;
+}
+
+.markdownContainer h2 {
+  font-size: 30px;
+}
+
+.markdownContainer h3 {
+  font-size: 24px;
+}
+
+.markdownContainer h4 {
+  font-size: 20px;
+}
+
+.markdownContainer h5 {
+  font-size: 18px;
+}
+
+.markdownContainer h6 {
+  font-size: 16px;
+}
+
+/* Code block Styling */
+.markdownContainer pre {
+  font-size: 14px;
+}
+
+/* Inline code styling */
+.markdownContainer code {
+  padding: 3px 5px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Links Styling */
+.markdownContainer a {
+  color: var(--Primitive-Default);
+  text-decoration: none;
+}
+
+.markdownContainer a:hover {
+  text-decoration: underline;
+}
+
+/* Blockquote styling */
+.markdownContainer blockquote {
+  border-left: 4px solid var(--Primary-transparent-3);
+  padding-left: 20px;
+  color: var(--Primary-transparent-80);
+  font-style: italic;
+  margin: 20px 0;
+}
+
+/* Lists Styling */
+.markdownContainer ul,
+.markdownContainer ol {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.markdownContainer li {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--Primitive-0);
+  animation: loadingAnimation 1.5s infinite ease-in-out;
+}
+
+@keyframes loadingAnimation {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
